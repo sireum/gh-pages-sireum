@@ -24,7 +24,7 @@ Read more &amp;hellip;
       
       <guid>https://sireum.org/about/</guid>
       <description>Sireum aims to provide basic building blocks, frameworks, and tools to engineer high assurance systems by employing various formal method techniques for system validation and verification (V&amp;amp;V) at different stages of system development cycle such as architectural designs and system implementations.
-Center to its approach is Slang &amp;ndash; the Sireum programming language, a modern language designed first for formal safety and security analyses. Slang is (currently) realized as a subset of the Scala programming language with customized semantics designed to ease program reasoning.</description>
+Central to its approach is Slang &amp;ndash; the Sireum programming language, a modern language designed first for formal safety and security analyses. Slang is (currently) realized as a subset of the Scala programming language with customized semantics designed to ease program reasoning.</description>
     </item>
     
     <item>
