@@ -61,5 +61,23 @@ Download Binary Distributions GitHub Releases The binary distribution files are 
       <description>Jason Belt, John Hatcliff, Robby, John Shackleton, Jim Carciofini, Todd Carpenter, Eric Mercer, Isaac Amundson, Junaid Babar, Darren Cofer, David Hardin, Karl Hoech, Konrad Slind, Ihor Kuz, Kent McLeod: Model-driven development for the seL4 microkernel using the HAMR framework. JSA 134: 102789, 2023. John Hatcliff, Danielle Stewart, Jason Belt, Robby: An AADL Contract Language Supporting Integrated Model- and Code-Level Verification. HILT 2022 (to appear). Darren Cofer, Isaac Amundson, Junaid Babar, David Hardin, Konrad Slind, Perry Alexander, John Hatcliff, Robby, Gerwin Klein, Corey Lewis, Eric Mercer, John Shackleton: Cyberassured Systems Engineering at Scale.</description>
     </item>
     
+    <item>
+      <title>Team</title>
+      <link>https://sireum.org/team/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sireum.org/team/</guid>
+      <description>Faculty
+Robby, Principal Engineer John Hatcliff, HAMR &amp;amp; Documentation Lead, External Liaison Coordinator Research Associates
+Jason Belt, Main HAMR Developer Graduate Stundents
+Matthew Weis: Slang Hardware Synthesis, Distributed HAMR Undergraduate Students
+Gage Hawbaker: Logika Clint McKenzie: HAMR SysML V2 Abdullah Rasheed: HAMR High School Students
+Jacob Legg: HAMR Catalina Liang: Webmaster &amp;amp; Documentation Collaborators Aarhus University
+Faculty
+Stefan Hallerstede: Logika course materials, Isabelle integration Collins Aerospace
+Principal Investigators
+Darren Cofer David Hardin Performers</description>
+    </item>
+    
   </channel>
 </rss>
