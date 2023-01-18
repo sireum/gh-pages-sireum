@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Sireum is available as pre-built binaries/installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. As Sireum is currently in its early active development phase, it is highly recommended to use the source distribution.
+Download Binary Distributions GitHub Releases The binary distribution files are available at: https://github." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://sireum.org/getting-started/" />
+
+
+    <title>
+        
+            Getting Started :: Sireum 
+        
+    </title>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://sireum.org/_pagefind/pagefind-ui.css" rel="stylesheet">
+
+
+
+
+<link rel="stylesheet" href="https://sireum.org/main.d2634b9460df43283ef2a51b2626c4508d2bd8a46615309a57325bb9602368f2.css" integrity="sha256-0mNLlGDfQyg&#43;8qUbJibEUI0r2KRmFTCaVzJbuWAjaPI=">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://sireum.org/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://sireum.org/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://sireum.org/favicon-16x16.png">
+    <link rel="manifest" href="https://sireum.org/site.webmanifest">
+    <link rel="mask-icon" href="https://sireum.org/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="https://sireum.org/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="Getting Started">
+<meta itemprop="description" content="Sireum is available as pre-built binaries/installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. As Sireum is currently in its early active development phase, it is highly recommended to use the source distribution.
+Download Binary Distributions GitHub Releases The binary distribution files are available at: https://github.">
+
+<meta itemprop="wordCount" content="1010"><meta itemprop="image" content="https://sireum.org"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://sireum.org"/>
+
+<meta name="twitter:title" content="Getting Started"/>
+<meta name="twitter:description" content="Sireum is available as pre-built binaries/installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. As Sireum is currently in its early active development phase, it is highly recommended to use the source distribution.
+Download Binary Distributions GitHub Releases The binary distribution files are available at: https://github."/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://sireum.org/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <img class="color-scheme" src="https://sireum.org/img/santos/icon-sireum.png" alt="">
+            &nbsp;<span class="logo__text">Sireum</span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                
+
+<nav class="menu">
+  <ul class="menu__inner">
+  
+  
+    
+      <div><li><a href="https://sireum.org/about/" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >About</a></li></div>
+    
+  
+
+  
+  
+    
+      <div class="submenu">
+        <li class="dropdown" onmouseover="menuDisplay(this.children[1], true);" onmouseout="menuDisplay(this.children[1], false);">
+          <a class="dropbtn" href="">▼&nbsp;Projects</a>
+          <div class="dropdown-content" align="left">
+            <ul style="margin:8px;">
+              
+                
+  
+  
+    
+      <div><li><a href="https://slang.sireum.org" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Slang — Programming Language</a></li></div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div><li><a href="https://logika.sireum.org" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Logika — Verification Framework</a></li></div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div><li><a href="https://hamr.sireum.org" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >HAMR — AADL Model-based System Engineering Framework</a></li></div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div><li><a href="https://ive.sireum.org" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Integrated Verification Environment (IVE)</a></li></div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div class="submenu">
+        <li class="dropdown" onmouseover="menuDisplay(this.children[1], true);" onmouseout="menuDisplay(this.children[1], false);">
+          <a class="dropbtn" href="">▼&nbsp;Prototypes</a>
+          <div class="dropdown-content" align="left">
+            <ul style="margin:8px;">
+              
+                
+  
+  
+    
+      <div><li><a href="https://logika.sireum.org/infoflow" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Secure Conditional Information Flow Verifier</a></li></div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div><li><a href="https://hamr.sireum.org/sysmlv2" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >SysML V2 Front-end for HAMR</a></li></div>
+    
+  
+
+              
+            </ul>
+          </div>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div class="submenu">
+        <li class="dropdown" onmouseover="menuDisplay(this.children[1], true);" onmouseout="menuDisplay(this.children[1], false);">
+          <a class="dropbtn" href="https://tools.sireum.org">▼&nbsp;Auxiliary Tools</a>
+          <div class="dropdown-content" align="left">
+            <ul style="margin:8px;">
+              
+                
+  
+  
+    
+      <div><li><a href="https://slang.sireum.org/tools/proyek" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Proyek — Build Tool</a></li></div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div><li><a href="https://slang.sireum.org/tools/cligen" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Command-line Interface Generator</a></li></div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div><li><a href="https://slang.sireum.org/tools/pg" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Parser Generator</a></li></div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div><li><a href="https://slang.sireum.org/tools/sergen" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >JSON &amp; MessagePack Binding Generator</a></li></div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div><li><a href="https://slang.sireum.org/tools/transgen" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Slang Visitor/Transformer Generator</a></li></div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div><li><a href="https://slang.sireum.org/tools/presentasi" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Presentasi — Presentation Generator</a></li></div>
+    
+  
+
+              
+            </ul>
+          </div>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div class="submenu">
+        <li class="dropdown" onmouseover="menuDisplay(this.children[1], true);" onmouseout="menuDisplay(this.children[1], false);">
+          <a class="dropbtn" href="">▼&nbsp;Older Generations</a>
+          <div class="dropdown-content" align="left">
+            <ul style="margin:8px;">
+              
+                
+  
+  
+    
+      <div><li><a href="https://logika.v3.sireum.org" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >[3rd Gen] Logika — Program Verifier</a></li></div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div><li><a href="https://awas.sireum.org" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >[3rd Gen] Awas — AADL Information Flow Analyzer/Visualizer</a></li></div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div><li><a href="http://pag.arguslab.org/argus-saf" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >[2nd Gen] Amandroid (now Argus-SAF) — Android Static Analysis Framework</a></li></div>
+    
+  
+
+              
+            </ul>
+          </div>
+        </li>
+      </div>
+    
+  
+
+              
+            </ul>
+          </div>
+        </li>
+      </div>
+    
+  
+
+  
+  
+    
+      <div><li><a href="https://sireum.org/getting-started/" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Download</a></li></div>
+    
+  
+
+  
+  
+    
+      <div><li><a href="https://doc.sireum.org" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Documentation</a></li></div>
+    
+  
+
+  
+  
+    
+      <div><li><a href="https://sireum.org/papers/" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Papers</a></li></div>
+    
+  
+
+  
+  
+    
+      <div><li><a href="https://sireum.org/funding/" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Funding</a></li></div>
+    
+  
+
+  </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+              <span class="theme-toggle not-selectable"><img src="https://sireum.org/img/toggle.png"></span>
+        </span>
+    </span>
+      <div class="submenu">
+          <li class="dropdown" onmouseover="menuDisplay(this.children[1], true);" onmouseout="menuDisplay(this.children[1], false);">
+              <a class="dropbtn"><big><big><big><big><big>⌕</big></big></big></big></big></a>
+              <div class="dropdown-content" align="left">
+                  <div id="search" style="z-index:2147483647; position: fixed;"></div>
+              </div>
+          </li>
+      </div>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://sireum.org/getting-started/">Getting Started</a></h2>
+
+            
+            
+            
+                <hr />
+                <aside id="toc">
+                <div class="toc-title">Table of Contents</div>
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#download">Download</a>
+      <ul>
+        <li><a href="#binary">Binary Distributions</a>
+          <ul>
+            <li><a href="#github">GitHub Releases</a></li>
+            <li><a href="#installer">Using Installer Scripts</a></li>
+          </ul>
+        </li>
+        <li><a href="#source">Git Source Distribution</a>
+          <ul>
+            <li><a href="#requirements">Requirements</a></li>
+            <li><a href="#setup">Setup</a>
+              <ul>
+                <li><a href="#notes">Notes</a></li>
+              </ul>
+            </li>
+            <li><a href="#native-executable">Native Executable</a></li>
+            <li><a href="#remote">Remote Development Setup (Experimental)</a>
+              <ul>
+                <li><a href="#projector">Using JetBrains Projector</a></li>
+                <li><a href="#gateway">Using JetBrains Gateway</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#using">Using Sireum</a></li>
+  </ul>
+</nav>
+                </aside>
+                <hr />
+            
+
+            <div class="post-content">
+                <ul>
+<li></li>
+</ul>
+<p>Sireum is available as pre-built binaries/installers or from source.
+The main advantage of using the source distribution is that updates
+can be done incrementally while the binary distribution requires complete
+re-installation. On the other hand, source distribution requires more setup.
+As Sireum is currently in its early active development phase, it is highly
+recommended to use the source distribution.</p>
+<h3 id="download">Download</h3>
+<h4 id="binary">Binary Distributions</h4>
+<h5 id="github">GitHub Releases</h5>
+<p>The binary distribution files are available at: <a href="https://github.com/sireum/kekinian/releases">https://github.com/sireum/kekinian/releases</a></p>
+<p>Sireum binary distribution files are <a href="https://www.7-zip.org/7z.html">7z</a>
+<a href="https://en.wikipedia.org/wiki/Self-extracting_archive">self-extracting archives (SFX)</a>
+with command-line installers to (optionally) configure where Sireum should be
+installed (the files can also be extracted using a program capable of uncompressing <code>7z</code> archive).</p>
+<p>On macOS, you might need to &ldquo;un-quarantine&rdquo; the self-extracting executable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xattr -rd com.apple.quarantine &lt;PATH-TO&gt;/sireum-dev-mac.sfx
+</span></span></code></pre></div><p>If you want to ensure that the downloaded files are genuine, download
+the appropriate <a href="https://jedisct1.github.io/minisign/">Minisign</a> signature file
+for the specific platform, then run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">minisign -P RWShRZe/1tMRHAcQ2162Wq5FhU2ptktJdQxzUxvK0MwVjDYRC4JY87Fb -VHm &lt;installer-file&gt;
+</span></span></code></pre></div><p>Set the <code>SIREUM_HOME</code> env var to the Sireum installation path, then proceed to <a href="#using-sireum">Using Sireum</a>.</p>
+<h5 id="installer">Using Installer Scripts</h5>
+<p>You can also set up the bleeding edge version of Sireum by downloading and running Sireum&rsquo;s initialization script
+(<code>curl</code> is required; <code>DIR</code> can be set to another path for Sireum home bin directory):</p>
+<ul>
+<li>
+<p><strong>macOS/Linux</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>sireum <span class="o">&amp;&amp;</span> <span class="nv">SIREUM_V</span><span class="o">=</span>master <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Windows</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=sireum &amp;&amp; set SIREUM_V=master&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
+</span></span></code></pre></div></li>
+</ul>
+<p>Note that this installation approach is using GitHub anonymous connection, thus subject to rate limiting.
+To remove the limit, set the <code>GITHUB_TOKEN</code> environment variable to one of your GitHub tokens.</p>
+<p>Also note that, the latest pre-built <code>sireum.jar</code> might be behind the latest commit, so there might be app/dependency
+versioning mismatch compared to the source distribution, but it does not require source compilation (faster).
+The pre-built <code>sireum.jar</code> is more frequently updated than the GitHub release binary distribution described above,
+and it is what is used to build Sireum itself at every commit.</p>
+<p>To ensure there is no versioning mismatch, you can use a specific version of Sireum, by replacing <code>master</code> with
+a release version (&gt; 4.202211*) or commit tip SHA (without the <code>4.</code> prefix) listed at
+<a href="https://github.com/sireum/init/releases">https://github.com/sireum/init/releases</a> in the command line above.</p>
+<h4 id="source">Git Source Distribution</h4>
+<h5 id="requirements">Requirements</h5>
+<ul>
+<li>
+<p><strong>macOS</strong>: <code>curl</code> and <code>git</code></p>
+</li>
+<li>
+<p><strong>Linux</strong> (amd64, aarch64): <code>curl</code> and <code>git</code></p>
+</li>
+<li>
+<p><strong>Windows</strong>, either:</p>
+<ul>
+<li>
+<p>Using a NTFS partition with <a href="https://docs.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development">Developer Mode enabled</a>,
+<a href="https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=registry#enable-long-paths-in-windows-10-version-1607-and-later">long-path enabled</a>,
+and <code>git</code> (<a href="https://git-scm.com/download/win">Git For Windows</a>, <a href="https://www.msys2.org/">MSYS2</a>, or <a href="https://www.cygwin.com">Cygwin</a>)
+with its <code>core.longpaths</code> config set to <code>true</code>; or</p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/windows/wsl/wsl2-index">WSL2</a> (Linux requirements apply)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Note that Sireum stores small, pre-built binary dependencies in its repositories.
+Virus analysis results are provided in the respective submodule repositories for
+<a href="https://github.com/sireum/bin-mac">macOS</a>,
+<a href="https://github.com/sireum/bin-linux">Linux</a>, and
+<a href="https://github.com/sireum/bin-windows">Windows</a>.</p>
+<h5 id="setup">Setup</h5>
+<p>In a console terminal:</p>
+<ul>
+<li>
+<p><strong>macOS/Linux</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone --recursive https://github.com/sireum/kekinian
+</span></span><span class="line"><span class="cl">kekinian/bin/build.cmd setup  <span class="c1"># for non-POSIX shell, prefix with sh</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Windows</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">git clone --recursive https://github.com/sireum/kekinian
+</span></span><span class="line"><span class="cl">kekinian\bin\build.cmd setup
+</span></span></code></pre></div></li>
+</ul>
+<p>The above install Sireum command-line interface (CLI) and
+its IntelliJ-based Integrated Verification Environment (IVE),
+as well as their dependencies.
+Set the <code>SIREUM_HOME</code> env var to the <code>kekinian</code> path above.</p>
+<p>To update later on, simply do a <code>git pull --recurse-submodules</code> and re-run
+<code>build.cmd</code>.
+Note that after a <code>setup</code> update, it is best to invalidate IntelliJ&rsquo;s cache files
+and restart by using IntelliJ&rsquo;s <code>File -&gt; Invalidate Caches...</code>
+menu item and select <code>Clear all file system cache and Local History</code>.</p>
+<h6 id="notes">Notes</h6>
+<ul>
+<li>
+<p>Occasionally, there might be new API used in <code>build.cmd</code> that is available
+in the pre-built binary online but not in your local copy.
+This issue happens because <code>build.cmd</code> uses Sireum itself, hence it is a
+bootstrapping issue.
+This issue typically manifests by <code>build.cmd</code> failing to compile/execute
+due to missing methods/classes.
+In that case, first delete your local <code>sireum.jar</code> (and <code>build.cmd.com</code>, if any)
+in the <code>bin</code> directory and then re-run <code>build.cmd setup</code>.</p>
+</li>
+<li>
+<p>If building Sireum somehow failed still, try cleaning the repo:</p>
+<ul>
+<li>
+<p><strong>macOS/Linux</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/clean.sh
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Windows</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\clean.bat
+</span></span></code></pre></div></li>
+</ul>
+<p>The clean scripts remove all Sireum-related cache directories and revert any changes and delete new files in
+the local git repository.</p>
+<p>After cleaning, re-run <code>git pull --recurse-submodules</code> (possibly multiple times until it reaches a good fix-point
+where <code>git status</code> indicates that its working tree is clean) and <code>build.cmd setup</code>.</p>
+<p>If all else fails, try recursively re-clone Sireum.</p>
+</li>
+</ul>
+<h5 id="native-executable">Native Executable</h5>
+<p>It is recommended to compile Sireum (and Slash build scripts) to native as it removes JVM boot up time.</p>
+<p>First, install <a href="http://graalvm.org">GraalVM</a> <a href="https://www.graalvm.org/reference-manual/native-image/#prerequisites"><code>native-image</code>&rsquo;s prerequisites</a>
+(note: <code>native-image</code> for Windows requires Visual Studio Community/Enterprise);
+then, to build Sireum native executable:</p>
+<ul>
+<li>
+<p><strong>macOS/Linux</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/build.cmd native
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Windows</strong>:</p>
+<ul>
+<li>
+<p>Visual Studio 2022 Enterprise</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\build.cmd native
+</span></span></code></pre></div></li>
+<li>
+<p>Visual Studio 2019 Community</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\build.cmd native
+</span></span></code></pre></div></li>
+<li>
+<p>Visual Studio 2017 Community</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\build.cmd native
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+<p>To run:</p>
+<ul>
+<li>
+<p><strong>macOS</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/mac/sireum
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Linux</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/sireum
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Windows</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\sireum.exe
+</span></span></code></pre></div></li>
+</ul>
+<p>Note that once the native version is available (and has a newer timestamp),
+<code>sireum</code> and <code>sireum.bat</code> in <code>bin</code> call the native version.
+This is also similar for <code>build.cmd</code> in <code>bin</code>.</p>
+<h5 id="remote">Remote Development Setup (Experimental)</h5>
+<h6 id="projector">Using JetBrains Projector</h6>
+<p>You can project Sireum IVE so it can be viewed by a web browser using
+<a href="https://lp.jetbrains.com/projector/">JetBrains Projector</a> that ships with IVE.
+To launch, click on &ldquo;Projector&rdquo; in the IVE status bar.</p>
+<p>If you use Linux, you can launch Sireum IVE headless-ly by first installing the projector server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">$SIREUM_HOME</span>/bin/install/projector-server.cmd
+</span></span><span class="line"><span class="cl"><span class="nv">$SIREUM_HOME</span>/bin/linux/idea/bin/projector-server.sh
+</span></span></code></pre></div><p>Then open http://<em><code>&lt;machine-ip&gt;</code></em>:8887 in a browser.</p>
+<h6 id="gateway">Using JetBrains Gateway</h6>
+<p>IntelliJ Ultimate now supports remote development from a Linux server reachable using ssh, and
+Sireum IVE can be set up on top of it:</p>
+<ol>
+<li>
+<p>Use <a href="https://www.jetbrains.com/remote-development/gateway/">JetBrains Gateway</a> to
+install an IntelliJ Ultimate instance in the Linux server.</p>
+<p>Note that the supported instance version of IntelliJ should be compatible with
+what is listed in <a href="versions.properties">version.properties</a> with property key
+<code>org.sireum.version.idea</code> property key). If the listed property value is
+<code>20XX.Y.Z</code> or <code>20XX.Y</code>, then you need to IntelliJ Ultimate build that starts
+with<code>XXY</code>.</p>
+</li>
+<li>
+<p>Connect to the server and install Sireum:</p>
+<pre tabindex="0"><code>git clone --recursive https://github.com/sireum/kekinian
+kekinian/bin/build.cmd setup-server
+</code></pre></li>
+<li>
+<p>Open the <code>kekinian</code> path above with JetBrains Gateway/Client.</p>
+</li>
+</ol>
+<h3 id="using">Using Sireum</h3>
+<p>To launch the Sireum CLI or IVE:</p>
+<ul>
+<li>
+<p><strong>macOS</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum                      <span class="c1"># CLI</span>
+</span></span><span class="line"><span class="cl">open <span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/mac/idea/IVE.app       <span class="c1"># IVE</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Linux (amd64)</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum
+</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/idea/bin/IVE.sh
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Linux (aarch64)</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum
+</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/arm/idea/bin/IVE.sh
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Windows</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum.bat
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\idea\bin\IVE.exe
+</span></span></code></pre></div></li>
+</ul>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://sireum.org/bundle.min.516ef6f0d37475767eddd82a274e44419b39487537e999d82058842ecab2557928f50f2b42cc88ec96e44cabf65098c810ef6c502ddac95b7414edc516db454d.js" integrity="sha512-UW728NN0dXZ&#43;3dgqJ05EQZs5SHU36ZnYIFiELsqyVXko9Q8rQsyI7JbkTKv2UJjIEO9sUC3ayVt0FO3FFttFTQ=="></script>
+
+
+<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/thecarnie-cycle2/2.1.6c/jquery.cycle2.min.js"></script>
+<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+  <script type="text/javascript" src="https://sireum.org/_pagefind/pagefind-ui.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      new PagefindUI({
+        element: "#search",
+        showEmptyFilters: true,
+        mergeIndex: [
+          
+        ]
+      });
+    });
+  </script>
+    </body>
+</html>

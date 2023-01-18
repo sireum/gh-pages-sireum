@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sireum</title>
+    <link>https://sireum.org/</link>
+    <description>Recent content on Sireum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://sireum.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://sireum.org/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sireum.org/about/</guid>
+      <description>Sireum aims to provide basic building blocks, frameworks, and tools to engineer high assurance systems by employing various formal method techniques for system validation and verification (V&amp;amp;V) at different stages of system development cycle such as architectural designs and system implementations.
+Center to its approach is Slang &amp;ndash; the Sireum programming language, a modern language designed first for formal safety and security analyses. Slang is (currently) realized as a subset of the Scala programming language with customized semantics designed to ease program reasoning.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sireum.org/home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sireum.org/home/</guid>
+      <description>Sireum aims to provide basic building blocks, frameworks, and tools to engineer high assurance systems by employing various formal method techniques for system validation and verification (V&amp;amp;V) at different stages of system development cycle such as architectural designs and system implementations.
+Read more &amp;hellip;
+(c) 2017-2023, SAnToS Lab, Kansas State University, contact@santoslab.org</description>
+    </item>
+    
+    <item>
+      <title>Funding</title>
+      <link>https://sireum.org/funding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sireum.org/funding/</guid>
+      <description>MAILLE: Microkernal Application Information fLow with Logic-based Enforcement
+John Hatcliff (K-State PI), Robby; and Todd Carpenter (Lead PI) at Adventium Labs
+U.S. Air Force Research Laboratory (AFRL) Small Business Innovation Research (SBIR) Phase II
+Project total: $749,957 (K-State&#39;s portion: $347,000)
+Duration: May 2021 - April 2023 SIRFUR: Software Implementation from Rigorous Formal Usable Requirements
+Robby (K-State PI), John Hatcliff; and Todd Carpenter (Lead PI) at Adventium Labs
+Defense Advanced Research Projects Agency (DARPA) Small Business Innovation Research (SBIR) Phase II</description>
+    </item>
+    
+    <item>
+      <title>Getting Started</title>
+      <link>https://sireum.org/getting-started/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sireum.org/getting-started/</guid>
+      <description>Sireum is available as pre-built binaries/installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. As Sireum is currently in its early active development phase, it is highly recommended to use the source distribution.
+Download Binary Distributions GitHub Releases The binary distribution files are available at: https://github.</description>
+    </item>
+    
+    <item>
+      <title>Papers</title>
+      <link>https://sireum.org/papers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sireum.org/papers/</guid>
+      <description>Jason Belt, John Hatcliff, Robby, John Shackleton, Jim Carciofini, Todd Carpenter, Eric Mercer, Isaac Amundson, Junaid Babar, Darren Cofer, David Hardin, Karl Hoech, Konrad Slind, Ihor Kuz, Kent McLeod: Model-driven development for the seL4 microkernel using the HAMR framework. JSA 134: 102789, 2023. John Hatcliff, Danielle Stewart, Jason Belt, Robby: An AADL Contract Language Supporting Integrated Model- and Code-Level Verification. HILT 2022 (to appear). Darren Cofer, Isaac Amundson, Junaid Babar, David Hardin, Konrad Slind, Perry Alexander, John Hatcliff, Robby, Gerwin Klein, Corey Lewis, Eric Mercer, John Shackleton: Cyberassured Systems Engineering at Scale.</description>
+    </item>
+    
+  </channel>
+</rss>
