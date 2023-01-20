@@ -22,6 +22,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://sireum.org/_pagefind/pagefind-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css" integrity="sha512-mQwom8Ns4op+H29oDkD/LXO/OsXPvCFfkgZkFAVrhhePzRLU8NUI3Nkm43NhWUSmj3p5Cca2HTEkMQmXQRwDQQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 
 
@@ -39,12 +40,12 @@
     <meta name="msapplication-TileColor" content="">
 
 
-<meta itemprop="name" content="Sireum">
+<meta itemprop="name" content="">
 <meta itemprop="description" content="Sireum Website">
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sireum.org"/>
 
-<meta name="twitter:title" content="Sireum"/>
+<meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="Sireum Website"/>
 
 
@@ -100,7 +101,7 @@
     
       <div class="submenu">
         <li class="dropdown" onmouseover="menuDisplay(this.children[1], true);" onmouseout="menuDisplay(this.children[1], false);">
-          <a class="dropbtn" href="">▼&nbsp;Projects</a>
+          <a class="dropbtn" href="">Projects&nbsp;<small>ᐁ</small></a>
           <div class="dropdown-content" align="left">
             <ul style="margin:8px;">
               
@@ -146,7 +147,7 @@
     
       <div class="submenu">
         <li class="dropdown" onmouseover="menuDisplay(this.children[1], true);" onmouseout="menuDisplay(this.children[1], false);">
-          <a class="dropbtn" href="">▼&nbsp;Prototypes</a>
+          <a class="dropbtn" href="">Prototypes&nbsp;<small>ᐁ</small></a>
           <div class="dropdown-content" align="left">
             <ul style="margin:8px;">
               
@@ -182,7 +183,7 @@
     
       <div class="submenu">
         <li class="dropdown" onmouseover="menuDisplay(this.children[1], true);" onmouseout="menuDisplay(this.children[1], false);">
-          <a class="dropbtn" href="https://tools.sireum.org">▼&nbsp;Auxiliary Tools</a>
+          <a class="dropbtn" href="https://tools.sireum.org">Auxiliary Tools&nbsp;<small>ᐁ</small></a>
           <div class="dropdown-content" align="left">
             <ul style="margin:8px;">
               
@@ -254,7 +255,7 @@
     
       <div class="submenu">
         <li class="dropdown" onmouseover="menuDisplay(this.children[1], true);" onmouseout="menuDisplay(this.children[1], false);">
-          <a class="dropbtn" href="">▼&nbsp;Older Generations</a>
+          <a class="dropbtn" href="">Older Generations&nbsp;<small>ᐁ</small></a>
           <div class="dropdown-content" align="left">
             <ul style="margin:8px;">
               
@@ -364,11 +365,11 @@
     <main aria-role="main">
         <div>
             
-              <div class="cycle-slideshow post" data-cycle-slides="> a" data-cycle-pause-on-hover="true">
+              <div class="cycle-slideshow post" data-cycle-slides="> a" data-cycle-pause-on-hover="true" data-cycle-log="false">
                 
                   <a href="download/"><img class="color-scheme" src="https://sireum.org/img/sireum-banner.png"></a>
                 
-                  <a href="https://logika.sireum.org"><img class="" src="https://sireum.org/img/logika-demo.gif"></a>
+                  <a href="https://logika.sireum.org"data-cycle-timeout="12000"><img class="" src="https://sireum.org/img/logika-demo.gif"></a>
                 
                   <a href="https://hamr.sireum.org"><img class="" src="https://sireum.org/img/hamr-osate-arch.png"></a>
                 
@@ -395,16 +396,36 @@
               </div>
             
 
-            
-              <div id="home" class="post">
-                <p>Sireum aims to provide basic building blocks, frameworks, and tools to engineer high assurance systems
+            <div id="home" class="post">
+              
+                <div style="display: grid; grid-template-columns: 33.33% 33.33% 33.34%; text-align: center;">
+<div class="col">
+<small>
+<p><a href="https://slang.sireum.org">Slang</a>: <a href="https://bit.ly/slang-isola21">presentation</a>, <a href="https://link.springer.com/chapter/10.1007%2F978-3-030-89159-6_17">paper</a></p>
+</small>
+</div>
+<div class="col">
+<small>
+<p><a href="https://logika.sireum.org">Logika</a>: <a href="https://bit.ly/hamr-isola21">presentation</a></p>
+</small>
+</div>
+<div class="col">
+<small>
+<p><a href="https://hamr.sireum.org">HAMR</a>: <a href="">presentation</a>, <a href="https://link.springer.com/chapter/10.1007%2F978-3-030-89159-6_18">paper</a></p>
+</small>
+</div>
+</div>
+<hr>
+<p>Sireum aims to provide basic building blocks, frameworks, and tools to engineer high assurance systems
 by employing various formal method techniques for system validation and verification (V&amp;V) at
-different stages of system development cycle such as architectural designs and system implementations.</p>
-<p><a href="https://sireum.org/about">Read more &hellip;</a></p>
+different stages of system development cycle such as architectural designs and system implementations.
+<a href="https://sireum.org/about">Read more &hellip;</a></p>
+<hr>
+<div style="text-align: right;">
 <p>(c) 2017-2023, <a href="https://santoslab.org">SAnToS Lab</a>, <a href="https://ksu.edu">Kansas State University</a>, <a href="mailto:contact@santoslab.org">contact@santoslab.org</a></p>
-
-              </div>
-            
+</div>
+              
+            </div>
         </div>
     </main>
 
@@ -436,6 +457,18 @@ different stages of system development cycle such as architectural designs and s
         showEmptyFilters: true,
         mergeIndex: [
           
+        ]
+      });
+    });
+  </script>
+  <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js" integrity="sha512-sHSNLECRJSK+BFs7E8DiFc6pf6n90bLI85Emiw1jhreduZhK3VXgq9l4kAt9eTIHYAcuQBKHL01QKs4/3Xgl8g==" crossorigin="anonymous"></script>
+  <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js" integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX+yKMUFHzjaH2+AnM6vp2Xs+gNmaBAVWJjSmuPw76Efg==" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
         ]
       });
     });

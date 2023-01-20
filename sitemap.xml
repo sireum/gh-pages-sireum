@@ -2,8 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sireum.org/home/</loc>
-    <priority>0</priority>
+    <loc>https://sireum.org/</loc>
   </url><url>
     <loc>https://sireum.org/about/</loc>
   </url><url>
@@ -14,8 +13,6 @@
     <loc>https://sireum.org/getting-started/</loc>
   </url><url>
     <loc>https://sireum.org/papers/</loc>
-  </url><url>
-    <loc>https://sireum.org/</loc>
   </url><url>
     <loc>https://sireum.org/ive/</loc>
   </url><url>
