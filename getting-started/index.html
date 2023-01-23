@@ -29,7 +29,7 @@ Download Binary Distributions GitHub Releases The binary distribution files are 
 
 
 
-<link rel="stylesheet" href="https://sireum.org/main.13cf75a0ca23475d2e8a01d75aa8fe2afe99eef8b5132d609cfba9fb2fc5f188.css" integrity="sha256-E891oMojR10uigHXWqj&#43;Kv6Z7vi1Ey1gnPup&#43;y/F8Yg=">
+<link rel="stylesheet" href="https://sireum.org/main.f065a609e223a0d49cb76ee30862fb861feab932b271d12d091019096cf8ffbd.css" integrity="sha256-8GWmCeIjoNSct27jCGL7hh/quTKycdEtCRAZCWz4/70=">
 
 
 
@@ -46,7 +46,7 @@ Download Binary Distributions GitHub Releases The binary distribution files are 
 <meta itemprop="description" content="Sireum is available as pre-built binaries/installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. As Sireum is currently in its early active development phase, it is highly recommended to use the source distribution.
 Download Binary Distributions GitHub Releases The binary distribution files are available at: https://github.">
 
-<meta itemprop="wordCount" content="1033"><meta itemprop="image" content="https://sireum.org"/>
+<meta itemprop="wordCount" content="1040"><meta itemprop="image" content="https://sireum.org"/>
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sireum.org"/>
@@ -446,16 +446,40 @@ for the specific platform, then run:</p>
 <h5 id="installer">Using Installer Scripts</h5>
 <p>You can also set up the bleeding edge version of Sireum by downloading and running Sireum&rsquo;s initialization script
 (<code>curl</code> is required; <code>DIR</code> can be set to another path for Sireum home bin directory):</p>
-<ul>
-<li>
-<p><strong>macOS/Linux</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nv">SIREUM_V</span><span class="o">=</span>master <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Windows</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum &amp;&amp; set SIREUM_V=master&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
-</span></span></code></pre></div></li>
-</ul>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS/Linux"
+                data-tab-group="installer-script"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'installer-script','macOS\/Linux')"
+        >macOS/Linux</button>
+        
+        <button
+                data-tab-item="Windows"
+                data-tab-group="installer-script"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'installer-script','Windows')"
+        >Windows</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nv">SIREUM_V</span><span class="o">=</span>master <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum &amp;&amp; set SIREUM_V=master&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div>
 <p>Note that this installation approach is using GitHub anonymous connection, thus subject to rate limiting.
 To remove the limit, set the <code>GITHUB_TOKEN</code> environment variable to one of your GitHub tokens.</p>
 <p>Also note that, the latest pre-built <code>sireum.jar</code> might be behind the latest commit, so there might be app/dependency
@@ -495,19 +519,43 @@ Virus analysis results are provided in the respective submodule repositories for
 <a href="https://github.com/sireum/bin-linux">Linux</a>, and
 <a href="https://github.com/sireum/bin-windows">Windows</a>.</p>
 <h5 id="setup">Setup</h5>
-<p>In a console terminal:</p>
-<ul>
-<li>
-<p><strong>macOS/Linux</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone --recursive https://github.com/sireum/kekinian Sireum
+<p>In a console terminal:
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS/Linux"
+                data-tab-group="setup"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'setup','macOS\/Linux')"
+        >macOS/Linux</button>
+        
+        <button
+                data-tab-item="Windows"
+                data-tab-group="setup"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'setup','Windows')"
+        >Windows</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS/Linux" data-tab-group="setup" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone --recursive https://github.com/sireum/kekinian Sireum
 </span></span><span class="line"><span class="cl">Sireum/bin/build.cmd setup  <span class="c1"># for non-POSIX shell, prefix with sh</span>
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Windows</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">git clone --recursive https://github.com/sireum/Sireum
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows" data-tab-group="setup" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">git clone --recursive https://github.com/sireum/Sireum
 </span></span><span class="line"><span class="cl">Sireum\bin\build.cmd setup
-</span></span></code></pre></div></li>
-</ul>
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div></p>
 <p>The above install Sireum command-line interface (CLI) and
 its IntelliJ-based Integrated Verification Environment (IVE),
 as well as their dependencies.
@@ -531,16 +579,40 @@ in the <code>bin</code> directory and then re-run <code>build.cmd setup</code>.<
 </li>
 <li>
 <p>If building Sireum somehow failed still, try cleaning the repo:</p>
-<ul>
-<li>
-<p><strong>macOS/Linux</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/clean.sh
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Windows</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\clean.bat
-</span></span></code></pre></div></li>
-</ul>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS/Linux"
+                data-tab-group="clean"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'clean','macOS\/Linux')"
+        >macOS/Linux</button>
+        
+        <button
+                data-tab-item="Windows"
+                data-tab-group="clean"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'clean','Windows')"
+        >Windows</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS/Linux" data-tab-group="clean" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/clean.sh
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows" data-tab-group="clean" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\clean.bat
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div>
 <p>The clean scripts remove all Sireum-related cache directories and revert any changes and delete new files in
 the local git repository.</p>
 <p>After cleaning, re-run <code>git pull --recurse-submodules</code> (possibly multiple times until it reaches a good fix-point
@@ -560,40 +632,104 @@ then, to build Sireum native executable:</p>
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Windows</strong>:</p>
-<ul>
-<li>
-<p>Visual Studio 2022 Enterprise</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="Visual Studio 2022 Enterprise"
+                data-tab-group="vs-version"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'vs-version','Visual Studio 2022 Enterprise')"
+        >Visual Studio 2022 Enterprise</button>
+        
+        <button
+                data-tab-item="Visual Studio 2019 Community"
+                data-tab-group="vs-version"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'vs-version','Visual Studio 2019 Community')"
+        >Visual Studio 2019 Community</button>
+        
+        <button
+                data-tab-item="Visual Studio 2017 Community"
+                data-tab-group="vs-version"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'vs-version','Visual Studio 2017 Community')"
+        >Visual Studio 2017 Community</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="Visual Studio 2022 Enterprise" data-tab-group="vs-version" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\build.cmd native
-</span></span></code></pre></div></li>
-<li>
-<p>Visual Studio 2019 Community</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Visual Studio 2019 Community" data-tab-group="vs-version" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\build.cmd native
-</span></span></code></pre></div></li>
-<li>
-<p>Visual Studio 2017 Community</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Visual Studio 2017 Community" data-tab-group="vs-version" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\build.cmd native
-</span></span></code></pre></div></li>
-</ul>
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div>
 </li>
 </ul>
-<p>To run:</p>
-<ul>
-<li>
-<p><strong>macOS</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/mac/sireum
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Linux</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/sireum
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Windows</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\sireum.exe
-</span></span></code></pre></div></li>
-</ul>
+<p>The compiled native binary can be directly run as follows:
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS"
+                data-tab-group="running-native"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'running-native','macOS')"
+        >macOS</button>
+        
+        <button
+                data-tab-item="Linux"
+                data-tab-group="running-native"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'running-native','Linux')"
+        >Linux</button>
+        
+        <button
+                data-tab-item="Windows"
+                data-tab-group="running-native"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'running-native','Windows')"
+        >Windows</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS" data-tab-group="running-native" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/mac/sireum
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Linux" data-tab-group="running-native" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/sireum
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows" data-tab-group="running-native" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\sireum.exe
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div></p>
 <p>Note that once the native version is available (and has a newer timestamp),
 <code>sireum</code> and <code>sireum.bat</code> in <code>bin</code> call the native version.
 This is also similar for <code>build.cmd</code> in <code>bin</code>.</p>
@@ -629,43 +765,107 @@ with<code>XXY</code>.</p>
 </li>
 </ol>
 <h4 id="installing-fmidehamr">Installing FMIDE+HAMR</h4>
-<ul>
-<li>
-<p><strong>macOS/Linux</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/fmide.cmd
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Windows</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\fmide.cmd
-</span></span></code></pre></div></li>
-</ul>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS/Linux"
+                data-tab-group="hamr-install"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'hamr-install','macOS\/Linux')"
+        >macOS/Linux</button>
+        
+        <button
+                data-tab-item="Windows"
+                data-tab-group="hamr-install"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'hamr-install','Windows')"
+        >Windows</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS/Linux" data-tab-group="hamr-install" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/fmide.cmd
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows" data-tab-group="hamr-install" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\fmide.cmd
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div>
 <h3 id="using">Using Sireum</h3>
 <p>To launch the Sireum CLI, IVE, or FMIDE+HAMR:</p>
-<ul>
-<li>
-<p><strong>macOS</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum                      <span class="c1"># CLI</span>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS"
+                data-tab-group="using"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'using','macOS')"
+        >macOS</button>
+        
+        <button
+                data-tab-item="Linux"
+                data-tab-group="using"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'using','Linux')"
+        >Linux</button>
+        
+        <button
+                data-tab-item="Linux (aarch64)"
+                data-tab-group="using"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'using','Linux (aarch64)')"
+        >Linux (aarch64)</button>
+        
+        <button
+                data-tab-item="Windows"
+                data-tab-group="using"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'using','Windows')"
+        >Windows</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS" data-tab-group="using" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum                      <span class="c1"># CLI</span>
 </span></span><span class="line"><span class="cl">open <span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/mac/idea/IVE.app       <span class="c1"># IVE</span>
 </span></span><span class="line"><span class="cl">open <span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>bin/mac/fmide.app           <span class="c1"># FMIDE+HAMR</span>
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Linux (amd64)</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Linux" data-tab-group="using" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/idea/bin/IVE.sh
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/fmide/fmide
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Linux (aarch64)</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Linux (aarch64)" data-tab-group="using" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/arm/idea/bin/IVE.sh
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Windows</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum.bat
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows" data-tab-group="using" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum.bat
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\idea\bin\IVE.exe
 </span></span><span class="line"><span class="cl"><span class="k">start</span> /B <span class="nv">%SIREUM_HOME%</span>\bin\win\fmide\fmide.exe
-</span></span></code></pre></div></li>
-</ul>
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div>
 <p>See <a href="https://doc.sireum.org">Sireum Documentation</a> for more information.</p>
 
             </div>
@@ -697,7 +897,7 @@ with<code>XXY</code>.</p>
 
 
 
-<script type="text/javascript" src="https://sireum.org/bundle.min.9f0d2b5f7b1b3528ed20d0a72d686c1f08346d1d1ed7cb1ee9c125a41427b43bb21474f0c6544f8cefe2ba428ae12215d4b4d049de38740ffd7f748bdf41615d.js" integrity="sha512-nw0rX3sbNSjtINCnLWhsHwg0bR0e18se6cElpBQntDuyFHTwxlRPjO/iukKK4SIV1LTQSd44dA/9f3SL30FhXQ=="></script>
+<script type="text/javascript" src="https://sireum.org/bundle.min.878f22d9c9be4a5fae8d538bf2b0dd20e2ac06dcd2e6909022662b29778d8a446e00158812286fa859fb09c9f234f9f8d2353b5c4b8f37e2921529770787d1b3.js" integrity="sha512-h48i2cm&#43;Sl&#43;ujVOL8rDdIOKsBtzS5pCQImYrKXeNikRuABWIEihvqFn7CcnyNPn40jU7XEuPN&#43;KSFSl3B4fRsw=="></script>
 
 
 <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/thecarnie-cycle2/2.1.6c/jquery.cycle2.min.js" integrity="sha512-ydWfQuPu+srw5hhkU8O1XGn3/Kc+GyoDBvYc8E+SyuZKphQP18ZWYKywIFzPWZwQk6dlmTY69aDg/SnFz3qPeQ==" crossorigin="anonymous"></script>
