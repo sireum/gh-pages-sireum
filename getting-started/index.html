@@ -46,7 +46,7 @@ Download Binary Distributions GitHub Releases The binary distribution files are 
 <meta itemprop="description" content="Sireum is available as pre-built binaries/installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. As Sireum is currently in its early active development phase, it is highly recommended to use the source distribution.
 Download Binary Distributions GitHub Releases The binary distribution files are available at: https://github.">
 
-<meta itemprop="wordCount" content="1016"><meta itemprop="image" content="https://sireum.org"/>
+<meta itemprop="wordCount" content="1033"><meta itemprop="image" content="https://sireum.org"/>
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sireum.org"/>
@@ -142,7 +142,7 @@ Download Binary Distributions GitHub Releases The binary distribution files are 
   
   
     
-      <div><li><a href="https://sireum.org/ive" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Integrated Verification Environment (IVE)</a></li></div>
+      <div><li><a href="https://sireum.org/ive/" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);" >Integrated Verification Environment (IVE)</a></li></div>
     
   
 
@@ -411,6 +411,7 @@ Download Binary Distributions GitHub Releases The binary distribution files are 
             </li>
           </ul>
         </li>
+        <li><a href="#installing-fmidehamr">Installing FMIDE+HAMR</a></li>
       </ul>
     </li>
     <li><a href="#using">Using Sireum</a></li>
@@ -436,7 +437,7 @@ recommended to use the source distribution.</p>
 with command-line installers to (optionally) configure where Sireum should be
 installed (the files can also be extracted using a program capable of uncompressing <code>7z</code> archive).</p>
 <p>On macOS, you might need to &ldquo;un-quarantine&rdquo; the self-extracting executable:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xattr -rd com.apple.quarantine &lt;PATH-TO&gt;/sireum-dev-mac.sfx
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">xattr -rd com.apple.quarantine &lt;PATH-TO&gt;/sireum-dev-mac.sfx
 </span></span></code></pre></div><p>If you want to ensure that the downloaded files are genuine, download
 the appropriate <a href="https://jedisct1.github.io/minisign/">Minisign</a> signature file
 for the specific platform, then run:</p>
@@ -448,11 +449,11 @@ for the specific platform, then run:</p>
 <ul>
 <li>
 <p><strong>macOS/Linux</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>sireum <span class="o">&amp;&amp;</span> <span class="nv">SIREUM_V</span><span class="o">=</span>master <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nv">SIREUM_V</span><span class="o">=</span>master <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Windows</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=sireum &amp;&amp; set SIREUM_V=master&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum &amp;&amp; set SIREUM_V=master&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
 </span></span></code></pre></div></li>
 </ul>
 <p>Note that this installation approach is using GitHub anonymous connection, thus subject to rate limiting.
@@ -498,19 +499,19 @@ Virus analysis results are provided in the respective submodule repositories for
 <ul>
 <li>
 <p><strong>macOS/Linux</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone --recursive https://github.com/sireum/kekinian
-</span></span><span class="line"><span class="cl">kekinian/bin/build.cmd setup  <span class="c1"># for non-POSIX shell, prefix with sh</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone --recursive https://github.com/sireum/kekinian Sireum
+</span></span><span class="line"><span class="cl">Sireum/bin/build.cmd setup  <span class="c1"># for non-POSIX shell, prefix with sh</span>
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Windows</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">git clone --recursive https://github.com/sireum/kekinian
-</span></span><span class="line"><span class="cl">kekinian\bin\build.cmd setup
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">git clone --recursive https://github.com/sireum/Sireum
+</span></span><span class="line"><span class="cl">Sireum\bin\build.cmd setup
 </span></span></code></pre></div></li>
 </ul>
 <p>The above install Sireum command-line interface (CLI) and
 its IntelliJ-based Integrated Verification Environment (IVE),
 as well as their dependencies.
-Set the <code>SIREUM_HOME</code> env var to the <code>kekinian</code> path above.</p>
+Set the <code>SIREUM_HOME</code> env var to the <code>Sireum</code> path above.</p>
 <p>To update later on, simply do a <code>git pull --recurse-submodules</code> and re-run
 <code>build.cmd</code>.
 Note that after a <code>setup</code> update, it is best to invalidate IntelliJ&rsquo;s cache files
@@ -533,7 +534,7 @@ in the <code>bin</code> directory and then re-run <code>build.cmd setup</code>.<
 <ul>
 <li>
 <p><strong>macOS/Linux</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/clean.sh
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/clean.sh
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Windows</strong>:</p>
@@ -555,7 +556,7 @@ then, to build Sireum native executable:</p>
 <ul>
 <li>
 <p><strong>macOS/Linux</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/build.cmd native
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/build.cmd native
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Windows</strong>:</p>
@@ -582,11 +583,11 @@ then, to build Sireum native executable:</p>
 <ul>
 <li>
 <p><strong>macOS</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/mac/sireum
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/mac/sireum
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Linux</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/sireum
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/sireum
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Windows</strong>:</p>
@@ -602,7 +603,7 @@ This is also similar for <code>build.cmd</code> in <code>bin</code>.</p>
 <a href="https://lp.jetbrains.com/projector/">JetBrains Projector</a> that ships with IVE.
 To launch, click on &ldquo;Projector&rdquo; in the IVE status bar.</p>
 <p>If you use Linux, you can launch Sireum IVE headless-ly by first installing the projector server:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">$SIREUM_HOME</span>/bin/install/projector-server.cmd
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">$SIREUM_HOME</span>/bin/install/projector-server.cmd
 </span></span><span class="line"><span class="cl"><span class="nv">$SIREUM_HOME</span>/bin/linux/idea/bin/projector-server.sh
 </span></span></code></pre></div><p>Then open http://<em><code>&lt;machine-ip&gt;</code></em>:8887 in a browser.</p>
 <h6 id="gateway">Using JetBrains Gateway</h6>
@@ -620,35 +621,49 @@ with<code>XXY</code>.</p>
 </li>
 <li>
 <p>Connect to the server and install Sireum:</p>
-<pre tabindex="0"><code>git clone --recursive https://github.com/sireum/kekinian
-kekinian/bin/build.cmd setup-server
-</code></pre></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone --recursive https://github.com/sireum/kekinian Sireum
+</span></span><span class="line"><span class="cl">Sireum/bin/build.cmd setup-server
+</span></span></code></pre></div></li>
 <li>
-<p>Open the <code>kekinian</code> path above with JetBrains Gateway/Client.</p>
+<p>Open the <code>Sireum</code> path above with JetBrains Gateway/Client.</p>
 </li>
 </ol>
+<h4 id="installing-fmidehamr">Installing FMIDE+HAMR</h4>
+<ul>
+<li>
+<p><strong>macOS/Linux</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/fmide.cmd
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Windows</strong>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\fmide.cmd
+</span></span></code></pre></div></li>
+</ul>
 <h3 id="using">Using Sireum</h3>
-<p>To launch the Sireum CLI or IVE:</p>
+<p>To launch the Sireum CLI, IVE, or FMIDE+HAMR:</p>
 <ul>
 <li>
 <p><strong>macOS</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum                      <span class="c1"># CLI</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum                      <span class="c1"># CLI</span>
 </span></span><span class="line"><span class="cl">open <span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/mac/idea/IVE.app       <span class="c1"># IVE</span>
+</span></span><span class="line"><span class="cl">open <span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>bin/mac/fmide.app           <span class="c1"># FMIDE+HAMR</span>
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Linux (amd64)</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/idea/bin/IVE.sh
+</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/fmide/fmide
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Linux (aarch64)</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/arm/idea/bin/IVE.sh
 </span></span></code></pre></div></li>
 <li>
 <p><strong>Windows</strong>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum.bat
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\idea\bin\IVE.exe
+</span></span><span class="line"><span class="cl"><span class="k">start</span> /B <span class="nv">%SIREUM_HOME%</span>\bin\win\fmide\fmide.exe
 </span></span></code></pre></div></li>
 </ul>
 <p>See <a href="https://doc.sireum.org">Sireum Documentation</a> for more information.</p>
