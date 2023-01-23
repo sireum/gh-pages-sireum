@@ -46,7 +46,7 @@ Download Binary Distributions GitHub Releases The binary distribution files are 
 <meta itemprop="description" content="Sireum is available as pre-built binaries/installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. As Sireum is currently in its early active development phase, it is highly recommended to use the source distribution.
 Download Binary Distributions GitHub Releases The binary distribution files are available at: https://github.">
 
-<meta itemprop="wordCount" content="1040"><meta itemprop="image" content="https://sireum.org"/>
+<meta itemprop="wordCount" content="1041"><meta itemprop="image" content="https://sireum.org"/>
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://sireum.org"/>
@@ -625,55 +625,60 @@ where <code>git status</code> indicates that its working tree is clean) and <cod
 <p>First, install <a href="http://graalvm.org">GraalVM</a> <a href="https://www.graalvm.org/reference-manual/native-image/#prerequisites"><code>native-image</code>&rsquo;s prerequisites</a>
 (note: <code>native-image</code> for Windows requires Visual Studio Community/Enterprise);
 then, to build Sireum native executable:</p>
-<ul>
-<li>
-<p><strong>macOS/Linux</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/build.cmd native
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Windows</strong>:</p>
 
 
 <div class="tab-panel">
     <div class="tab-nav">
         
         <button
-                data-tab-item="Visual Studio 2022 Enterprise"
-                data-tab-group="vs-version"
+                data-tab-item="macOS/Linux"
+                data-tab-group="native"
                 class="tab-nav-button btn active"
-        onclick="switchTab(true, 'vs-version','Visual Studio 2022 Enterprise')"
-        >Visual Studio 2022 Enterprise</button>
+        onclick="switchTab(true, 'native','macOS\/Linux')"
+        >macOS/Linux</button>
         
         <button
-                data-tab-item="Visual Studio 2019 Community"
-                data-tab-group="vs-version"
+                data-tab-item="Windows &#43; Visual Studio (VS) 2022 Enterprise"
+                data-tab-group="native"
                 class="tab-nav-button btn "
-        onclick="switchTab(true, 'vs-version','Visual Studio 2019 Community')"
-        >Visual Studio 2019 Community</button>
+        onclick="switchTab(true, 'native','Windows \u002b Visual Studio (VS) 2022 Enterprise')"
+        >Windows &#43; Visual Studio (VS) 2022 Enterprise</button>
         
         <button
-                data-tab-item="Visual Studio 2017 Community"
-                data-tab-group="vs-version"
+                data-tab-item="Windows &#43; VS 2019 Community"
+                data-tab-group="native"
                 class="tab-nav-button btn "
-        onclick="switchTab(true, 'vs-version','Visual Studio 2017 Community')"
-        >Visual Studio 2017 Community</button>
+        onclick="switchTab(true, 'native','Windows \u002b VS 2019 Community')"
+        >Windows &#43; VS 2019 Community</button>
+        
+        <button
+                data-tab-item="Windows &#43; VS 2017 Community"
+                data-tab-group="native"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'native','Windows \u002b VS 2017 Community')"
+        >Windows &#43; VS 2017 Community</button>
         
     </div>
     <div class="tab-content">
         
-        <div data-tab-item="Visual Studio 2022 Enterprise" data-tab-group="vs-version" class="tab-item active">
+        <div data-tab-item="macOS/Linux" data-tab-group="native" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/build.cmd native
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows &#43; Visual Studio (VS) 2022 Enterprise" data-tab-group="native" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\build.cmd native
 </span></span></code></pre></div>
     </div>
     
-        <div data-tab-item="Visual Studio 2019 Community" data-tab-group="vs-version" class="tab-item ">
+        <div data-tab-item="Windows &#43; VS 2019 Community" data-tab-group="native" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\build.cmd native
 </span></span></code></pre></div>
     </div>
     
-        <div data-tab-item="Visual Studio 2017 Community" data-tab-group="vs-version" class="tab-item ">
+        <div data-tab-item="Windows &#43; VS 2017 Community" data-tab-group="native" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\build.cmd native
 </span></span></code></pre></div>
@@ -681,9 +686,7 @@ then, to build Sireum native executable:</p>
     
 </div>
 </div>
-</li>
-</ul>
-<p>The compiled native binary can be directly run as follows:
+<p>The compiled native binary is located at:
 
 
 <div class="tab-panel">
@@ -897,7 +900,7 @@ with<code>XXY</code>.</p>
 
 
 
-<script type="text/javascript" src="https://sireum.org/bundle.min.878f22d9c9be4a5fae8d538bf2b0dd20e2ac06dcd2e6909022662b29778d8a446e00158812286fa859fb09c9f234f9f8d2353b5c4b8f37e2921529770787d1b3.js" integrity="sha512-h48i2cm&#43;Sl&#43;ujVOL8rDdIOKsBtzS5pCQImYrKXeNikRuABWIEihvqFn7CcnyNPn40jU7XEuPN&#43;KSFSl3B4fRsw=="></script>
+<script type="text/javascript" src="https://sireum.org/bundle.min.c42cd3af21ca2c37cc8dba0c632c9145c5585e2aa93ced3b4041bf51520241445a1b4b9124860a3b74f49b9ace6a8599f17eb9ded9a1109fa212a4fb871909a2.js" integrity="sha512-xCzTryHKLDfMjboMYyyRRcVYXiqpPO07QEG/UVICQURaG0uRJIYKO3T0m5rOaoWZ8X653tmhEJ&#43;iEqT7hxkJog=="></script>
 
 
 <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/thecarnie-cycle2/2.1.6c/jquery.cycle2.min.js" integrity="sha512-ydWfQuPu+srw5hhkU8O1XGn3/Kc+GyoDBvYc8E+SyuZKphQP18ZWYKywIFzPWZwQk6dlmTY69aDg/SnFz3qPeQ==" crossorigin="anonymous"></script>
