@@ -28,7 +28,7 @@
 
 
 
-<link rel="stylesheet" href="https://sireum.org/main.9c922db2f0b1928ba9b9af3a728419aeceb48bb98c995643b646049dae60d067.css" integrity="sha256-nJItsvCxkoupua86coQZrs60i7mMmVZDtkYEna5g0Gc=">
+<link rel="stylesheet" href="https://sireum.org/main.2ceeeae08ec4f4abbbdd1cf74ef622779407561bcc6268b4ade20b5facc0d900.css" integrity="sha256-LO7q4I7E9Ku73Rz3TvYid5QHVhvMYmi0reILX6zA2QA=">
 
 
 
@@ -72,6 +72,12 @@
     
         <div class="container">
             <header class="header">
+    <span class="menu-trigger">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+    </span>
     <span class="header__inner">
         <a href="https://sireum.org/" style="text-decoration: none;">
     <div class="logo">
@@ -366,16 +372,10 @@
   </ul>
 </nav>
 
-                <span class="menu-trigger">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-                    </svg>
-                </span>
             
-              <span class="theme-toggle not-selectable"><img src="https://sireum.org/img/toggle.png"></span>
         </span>
     </span>
+        <span class="theme-toggle not-selectable" style="margin-right: 10px"><img src="https://sireum.org/img/toggle.png" height="20px"></span>
       <div class="submenu">
           <li class="dropdown" onmouseover="menuDisplay(this.children[1], true); searchFocus();" onmouseout="menuDisplay(this.children[1], false);">
               <a class="dropbtn fa fa-search"></a>
@@ -384,6 +384,7 @@
               </div>
           </li>
       </div>
+    
 </header>
 
 
