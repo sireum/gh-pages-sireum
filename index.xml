@@ -36,8 +36,8 @@ Defense Advanced Research Projects Agency (DARPA) Small Business Innovation Rese
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://sireum.org/getting-started/</guid>
-      <description>Sireum is available as pre-built binaries/installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. As Sireum is currently in its early active development phase, it is highly recommended to use the source distribution.
-Download Binary Distributions GitHub Releases The binary distribution files are available at: https://github.</description>
+      <description>Sireum is available as pre-built binaries/installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts or download from Sireum&amp;rsquo;s GitHub Releases.
+Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster).</description>
     </item>
     
     <item>
