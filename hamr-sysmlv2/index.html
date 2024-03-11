@@ -5,16 +5,16 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="[pending]" />
+<meta name="description" content="SysML is a standardized modeling language used throughout industry for systems engineering &amp;ndash; particularly for embedded systems. The Object Management Group (OMG) is developing a new version of SysML referred to as SysMLv2. Instead of SysML modeling concepts being shoe-horned into UML as a UML profile, SysMLv2 has been reengineered from its foundations to provide a cleaner and more rigorous presentation of system modeling concepts. It has adopted features that have been central to AADL for decades &amp;ndash; the most notable are: (a) the inclusion of companion textual and graphical views of a model, and (b) a much greater focus on model semantics." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
-<link rel="canonical" href="https://sireum.org/ive/" />
+<link rel="canonical" href="https://sireum.org/hamr-sysmlv2/" />
 
 
     <title>
         
-            Integrated Verification Environment (IVE) :: Sireum 
+            HAMR SysML v2 :: Sireum 
         
     </title>
 
@@ -41,14 +41,14 @@
     <meta name="msapplication-TileColor" content="">
 
 
-<meta itemprop="name" content="Integrated Verification Environment (IVE)">
-<meta itemprop="description" content="[pending]">
+<meta itemprop="name" content="HAMR SysML v2">
+<meta itemprop="description" content="SysML is a standardized modeling language used throughout industry for systems engineering &ndash; particularly for embedded systems. The Object Management Group (OMG) is developing a new version of SysML referred to as SysMLv2. Instead of SysML modeling concepts being shoe-horned into UML as a UML profile, SysMLv2 has been reengineered from its foundations to provide a cleaner and more rigorous presentation of system modeling concepts. It has adopted features that have been central to AADL for decades &ndash; the most notable are: (a) the inclusion of companion textual and graphical views of a model, and (b) a much greater focus on model semantics.">
 
-<meta itemprop="wordCount" content="1"><meta itemprop="image" content="https://sireum.org/" />
+<meta itemprop="wordCount" content="411"><meta itemprop="image" content="https://sireum.org/" />
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://sireum.org/" /><meta name="twitter:title" content="Integrated Verification Environment (IVE)"/>
-<meta name="twitter:description" content="[pending]"/>
+<meta name="twitter:image" content="https://sireum.org/" /><meta name="twitter:title" content="HAMR SysML v2"/>
+<meta name="twitter:description" content="SysML is a standardized modeling language used throughout industry for systems engineering &ndash; particularly for embedded systems. The Object Management Group (OMG) is developing a new version of SysML referred to as SysMLv2. Instead of SysML modeling concepts being shoe-horned into UML as a UML profile, SysMLv2 has been reengineered from its foundations to provide a cleaner and more rigorous presentation of system modeling concepts. It has adopted features that have been central to AADL for decades &ndash; the most notable are: (a) the inclusion of companion textual and graphical views of a model, and (b) a much greater focus on model semantics."/>
 
 
 
@@ -595,7 +595,7 @@
         </div>
 
         <article>
-            <h2 class="post-title"><a href="https://sireum.org/ive/">Integrated Verification Environment (IVE)</a></h2>
+            <h2 class="post-title"><a href="https://sireum.org/hamr-sysmlv2/">HAMR SysML v2</a></h2>
 
             
             
@@ -603,7 +603,16 @@
 
             <div class="post-content">
                 <hr>
-<p>[pending]</p>
+<p>SysML is a standardized modeling language used throughout industry for systems engineering &ndash; particularly for embedded systems.  The Object Management Group (OMG) is developing a new version of SysML referred to as <a href="https://www.omgsysml.org/SysML-2.htm">SysMLv2</a>.   Instead of SysML modeling concepts being shoe-horned into UML as a UML profile, SysMLv2 has been reengineered from its foundations to provide a cleaner and more rigorous presentation of system modeling concepts.   It has adopted features that have been central to AADL for decades &ndash; the most notable are: (a) the inclusion of companion textual and graphical views of a model, and (b) a much greater focus on model semantics.  Moreover, many AADL concepts including system component categories and port-based communication can be presented directly as SysMLv2 modeling features.   Due to the anticipated widespread adoption of SysMLv2 within industry as well of commercial tooling from largest vendors of industry modeling tools, the AADL standards committee is working with OMG to determine how AADL concepts can be presented in SysMLv2.</p>
+<p>We have developed a prototype SysMLv2 front-end for HAMR based on the open source OMG community <a href="https://github.com/Systems-Modeling/SysML-v2-Pilot-Implementation">SysMLv2 pilot implementation</a>.  Our prototype supports a subset of SysMLv2 sufficient for representing AADL models used on recent and current Department of Defense research projects including DARPA CASE and DARPA PROVERS.  The prototype translates the supported SysMLv2 subset into the same intermediate representation used by HAMR to support AADL.   Therefore, the prototype supports HAMR code generation for all existing HAMR-support programming languages and platform targets including Scala/Slang/JVM, and C for Linux and the seL4 microkernel.  Moreover, as we add support for Rust in HAMR on DARPA PROVERS, HAMR will be able to generate Rust-based implementation for the new seL4 Microkit (previously called the &ldquo;core platform&rdquo;).</p>
+<p>To illustrate these capabilities, we have ported AADL models for several systems including the Galois&rsquo; <a href="https://github.com/GaloisInc/HARDENS">HARDENS Reactor Trip System</a>, the &ldquo;Isolette&rdquo; infant incubator introduced in the FAA&rsquo;s Requirements Engineering Management Handbook.  For each of these, we have used HAMR to build system deployments for JVM, JavaScript, C/Linux, and C/seL4 platforms.</p>
+<p>Moving forward, we are:</p>
+<ul>
+<li>working within the AADL Committee and partner committees within the OMG on standardizing AADL concepts in SysMLv2,</li>
+<li>extending our HAMR SysMLv2 prototype capabilities as part of the DARPA PROVERS program,</li>
+<li>enhancing our mechanized formal semantics of HAMR (built in the Isabelle theorem prover) to support SysMLv2 concepts that we believe would enhance our ability to support realistic embedded systems.</li>
+</ul>
+<p>We are seeking additional funding to harden our HAMR SysMLv2 prototype to support industrial workflows.</p>
 
             </div>
         </article>

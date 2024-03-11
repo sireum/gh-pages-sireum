@@ -29,6 +29,13 @@
       <description>Sireum is available as pre-built binaries/installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts or download from Sireum&amp;rsquo;s GitHub Releases.&#xA;Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster).</description>
     </item>
     <item>
+      <title>HAMR SysML v2</title>
+      <link>https://sireum.org/hamr-sysmlv2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sireum.org/hamr-sysmlv2/</guid>
+      <description>SysML is a standardized modeling language used throughout industry for systems engineering &amp;ndash; particularly for embedded systems. The Object Management Group (OMG) is developing a new version of SysML referred to as SysMLv2. Instead of SysML modeling concepts being shoe-horned into UML as a UML profile, SysMLv2 has been reengineered from its foundations to provide a cleaner and more rigorous presentation of system modeling concepts. It has adopted features that have been central to AADL for decades &amp;ndash; the most notable are: (a) the inclusion of companion textual and graphical views of a model, and (b) a much greater focus on model semantics.</description>
+    </item>
+    <item>
       <title>Integrated Verification Environment (IVE)</title>
       <link>https://sireum.org/ive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
