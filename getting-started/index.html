@@ -46,7 +46,7 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster).">
-  <meta itemprop="wordCount" content="926">
+  <meta itemprop="wordCount" content="919">
   <meta itemprop="image" content="https://sireum.org/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://sireum.org/"><meta name="twitter:title" content="Getting Started">
@@ -673,7 +673,7 @@ at every commit.</p>
     <div class="tab-content">
         
         <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nv">SIREUM_V</span><span class="o">=</span>master <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>master <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
 </span></span></code></pre></div>
     </div>
     
@@ -686,8 +686,8 @@ at every commit.</p>
 </div>
 <p>Note that this installation approach is using GitHub anonymous connection, thus subject to rate limiting.
 To remove the limit, set the <code>GITHUB_TOKEN</code> environment variable to one of your GitHub tokens.</p>
-<p>To use a specific version of Sireum, replace <code>master</code> with a release version (&gt; 4.202211*) or
-commit tip SHA (without the <code>4.</code> prefix) listed at <a href="https://github.com/sireum/init/releases">https://github.com/sireum/init/releases</a>
+<p>To use a specific version of Sireum, replace <code>master</code> with a release version (&gt; 4.202211*)
+listed at <a href="https://github.com/sireum/init/releases">https://github.com/sireum/init/releases</a>
 in the command line above.</p>
 <h4 id="source">Git Source Distribution</h4>
 <h5 id="requirements">Requirements</h5>
