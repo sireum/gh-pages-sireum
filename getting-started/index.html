@@ -46,7 +46,7 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster).">
-  <meta itemprop="wordCount" content="919">
+  <meta itemprop="wordCount" content="828">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -622,7 +622,6 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
               </ul>
             </li>
             <li><a href="#native-executable">Native Executable</a></li>
-            <li><a href="#remote">Remote Development Setup (Experimental)</a></li>
           </ul>
         </li>
         <li><a href="#hamr">Installing FMIDE+HAMR</a></li>
@@ -938,28 +937,6 @@ then, to build Sireum native executable:</p>
 <p>Note that once the native version is available (and has a newer timestamp),
 <code>sireum</code> and <code>sireum.bat</code> in <code>bin</code> call the native version.
 This is also similar for <code>build.cmd</code> in <code>bin</code>.</p>
-<h5 id="remote">Remote Development Setup (Experimental)</h5>
-<p>IntelliJ Ultimate now supports remote development from a Linux server reachable using ssh, and
-Sireum IVE can be set up on top of it:</p>
-<ol>
-<li>
-<p>Use <a href="https://www.jetbrains.com/remote-development/gateway/">JetBrains Gateway</a> to
-install an IntelliJ Ultimate instance in the Linux server.</p>
-<p>Note that the supported instance version of IntelliJ should be compatible with
-what is listed in <a href="https://github.com/sireum/kekinian/blob/master/versions.properties">version.properties</a>
-with property key <code>org.sireum.version.idea</code> property key). If the listed property value is
-<code>20XX.Y.Z</code> or <code>20XX.Y</code>, then you need to IntelliJ Ultimate build that starts
-with<code>XXY</code>.</p>
-</li>
-<li>
-<p>Connect to the server and install Sireum:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone --recursive https://github.com/sireum/kekinian Sireum
-</span></span><span class="line"><span class="cl">Sireum/bin/build.cmd setup-server
-</span></span></code></pre></div></li>
-<li>
-<p>Open the <code>Sireum</code> path above with JetBrains Gateway/Client.</p>
-</li>
-</ol>
 <h4 id="hamr">Installing FMIDE+HAMR</h4>
 
 
@@ -1041,7 +1018,7 @@ with<code>XXY</code>.</p>
 </div>
 </div>
 <h3 id="using-sireum">Using Sireum</h3>
-<p>To launch the Sireum CLI, IVE, or FMIDE+HAMR:</p>
+<p>To launch the Sireum CLI, IVE, or FMIDE+HAMR (it is best to unset the <code>JAVA_HOME</code> env var before launching IVE, if set):</p>
 
 
 <div class="tab-panel">
@@ -1087,14 +1064,14 @@ with<code>XXY</code>.</p>
     
         <div data-tab-item="Linux" data-tab-group="using" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum                      <span class="c1"># CLI</span>
-</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/idea/bin/IVE.sh       <span class="c1"># IVE</span>
+</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/idea/bin/IVE          <span class="c1"># IVE</span>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/fmide/fmide           <span class="c1"># FMIDE+HAMR</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Linux (aarch64)" data-tab-group="using" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum                      <span class="c1"># CLI</span>
-</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/arm/idea/bin/IVE.sh   <span class="c1"># IVE</span>
+</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/arm/idea/bin/IVE      <span class="c1"># IVE</span>
 </span></span></code></pre></div>
     </div>
     
