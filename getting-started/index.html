@@ -46,7 +46,7 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster).">
-  <meta itemprop="wordCount" content="828">
+  <meta itemprop="wordCount" content="944">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -612,7 +612,13 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
   <ul>
     <li><a href="#download">Download</a>
       <ul>
-        <li><a href="#installer">Using Installer Scripts</a></li>
+        <li><a href="#installer">Using Installer Scripts</a>
+          <ul>
+            <li><a href="#latest-release">Latest Release</a></li>
+            <li><a href="#for-cis-301--706-fall-2024">For CIS 301 &amp; 706, Fall 2024</a></li>
+            <li><a href="#latest-development-build">Latest Development Build</a></li>
+          </ul>
+        </li>
         <li><a href="#source">Git Source Distribution</a>
           <ul>
             <li><a href="#requirements">Requirements</a></li>
@@ -650,7 +656,78 @@ at every commit.</p>
 <h3 id="download">Download</h3>
 <h4 id="installer">Using Installer Scripts</h4>
 <p>You can set up Sireum by downloading and running its initialization script as follows
-(<code>curl</code> is required; <code>DIR</code> can be set to another path for Sireum home bin directory):</p>
+(<code>curl</code> is required; <code>DIR</code> can be set to another path for Sireum home bin directory).</p>
+<h5 id="latest-release">Latest Release</h5>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS/Linux"
+                data-tab-group="installer-script"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'installer-script','macOS\/Linux')"
+        >macOS/Linux</button>
+        
+        <button
+                data-tab-item="Windows"
+                data-tab-group="installer-script"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'installer-script','Windows')"
+        >Windows</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20240811.82750de <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20240811.82750de&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div>
+<h5 id="for-cis-301--706-fall-2024">For CIS 301 &amp; 706, Fall 2024</h5>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS/Linux"
+                data-tab-group="installer-script"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'installer-script','macOS\/Linux')"
+        >macOS/Linux</button>
+        
+        <button
+                data-tab-item="Windows"
+                data-tab-group="installer-script"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'installer-script','Windows')"
+        >Windows</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20240811.82750de <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20240811.82750de&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div>
+<h5 id="latest-development-build">Latest Development Build</h5>
 
 
 <div class="tab-panel">
@@ -688,8 +765,7 @@ at every commit.</p>
 <p>Note that this installation approach is using GitHub anonymous connection, thus subject to rate limiting.
 To remove the limit, set the <code>GITHUB_TOKEN</code> environment variable to one of your GitHub tokens.</p>
 <p>To use a specific version of Sireum, replace <code>master</code> with a release version (&gt;= 4.202208*)
-listed at <a href="https://github.com/sireum/kekinian/releases">https://github.com/sireum/kekinian/releases</a>
-in the command line above.</p>
+listed at <a href="https://github.com/sireum/kekinian/releases">https://github.com/sireum/kekinian/releases</a> in the command line above.</p>
 <h4 id="source">Git Source Distribution</h4>
 <h5 id="requirements">Requirements</h5>
 <ul>
