@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/opt/santos/jenkins/workspace/Sireum-Kekinian-Init-Ver/website",
+	"sourceRoot": "/Users/robby/Repositories/Sireum/website",
 	"sources": [
 		"themes/sireum/assets/scss/main.scss",
 		"themes/sireum/assets/scss/_normalize.scss",
