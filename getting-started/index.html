@@ -46,7 +46,7 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster).">
-  <meta itemprop="wordCount" content="944">
+  <meta itemprop="wordCount" content="951">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -1080,6 +1080,7 @@ This is also similar for <code>build.cmd</code> in <code>bin</code>.</p>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/coq.cmd         <span class="c1"># https://coq.inria.fr/</span>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/graal.cmd       <span class="c1"># https://www.graalvm.org/</span>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/isabelle.cmd    <span class="c1"># https://isabelle.in.tum.de/</span>
+</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/rust.cmd        <span class="c1"># https://www.rust-lang.org/</span>
 </span></span></code></pre></div>
     </div>
     
@@ -1088,6 +1089,7 @@ This is also similar for <code>build.cmd</code> in <code>bin</code>.</p>
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\clion.cmd         <span class="p">&amp;</span> :: https://www.jetbrains.com/clion/
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\graal.cmd         <span class="p">&amp;</span> :: https://www.graalvm.org/
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\isabelle.cmd      <span class="p">&amp;</span> :: https://isabelle.in.tum.de/
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\isabelle.cmd      <span class="p">&amp;</span> :: https://www.rust-lang.org/
 </span></span></code></pre></div>
     </div>
     
@@ -1140,14 +1142,14 @@ This is also similar for <code>build.cmd</code> in <code>bin</code>.</p>
     
         <div data-tab-item="Linux" data-tab-group="using" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum                      <span class="c1"># CLI</span>
-</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/idea/bin/IVE          <span class="c1"># IVE</span>
+</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/idea/bin/IVE.sh       <span class="c1"># IVE</span>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/fmide/fmide           <span class="c1"># FMIDE+HAMR</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Linux (aarch64)" data-tab-group="using" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum                      <span class="c1"># CLI</span>
-</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/arm/idea/bin/IVE      <span class="c1"># IVE</span>
+</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/arm/idea/bin/IVE.sh   <span class="c1"># IVE</span>
 </span></span></code></pre></div>
     </div>
     
