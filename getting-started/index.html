@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="Sireum can be retrieved using installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts.
+<meta name="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum&amp;rsquo;s GitHub Releases.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster)." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
@@ -44,15 +44,15 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
 
 
   <meta itemprop="name" content="Getting Started">
-  <meta itemprop="description" content="Sireum can be retrieved using installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts.
+  <meta itemprop="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum’s GitHub Releases.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster).">
-  <meta itemprop="wordCount" content="951">
+  <meta itemprop="wordCount" content="1066">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://sireum.org/">
   <meta name="twitter:title" content="Getting Started">
-  <meta name="twitter:description" content="Sireum can be retrieved using installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts.
+  <meta name="twitter:description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum’s GitHub Releases.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster).">
 
 
@@ -615,16 +615,18 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
         <li><a href="#installer">Using Installer Scripts</a>
           <ul>
             <li><a href="#latest-release">Latest Release</a></li>
-            <li><a href="#for-courses">For CIS 301 &amp; 706/801, Fall 2024</a></li>
+            <li><a href="#for-courses">For K-State CIS 301 &amp; 706/801, Fall 2024</a></li>
             <li><a href="#latest-development-build">Latest Development Build</a></li>
+            <li><a href="#notes">Notes</a></li>
           </ul>
         </li>
+        <li><a href="#github">Packaged Binaries</a></li>
         <li><a href="#source">Git Source Distribution</a>
           <ul>
             <li><a href="#requirements">Requirements</a></li>
             <li><a href="#setup">Setup</a>
               <ul>
-                <li><a href="#notes">Notes</a></li>
+                <li><a href="#notes-1">Notes</a></li>
               </ul>
             </li>
             <li><a href="#native-executable">Native Executable</a></li>
@@ -642,12 +644,14 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
             
 
             <div class="post-content">
-                <p>Sireum can be retrieved using <a href="#installer">installers</a> or from <a href="#source">source</a>.
+                <p>Sireum can be retrieved using <a href="#installer">installers</a>, <a href="#github">packaged binaries</a>,
+or from <a href="#source">source</a>.
 The main advantage of using the source distribution is that updates
 can be done incrementally while the binary distribution requires complete
 re-installation. On the other hand, source distribution requires more setup.
 The source distribution should be used by Sireum developers and code contributors,
-while users are recommended to use the installer scripts.</p>
+while users are recommended to use the installer scripts, or download from
+Sireum&rsquo;s <a href="#github">GitHub Releases</a>.</p>
 <p>Note that, the latest pre-built binary installed by the scripts might be behind
 the latest source commit, but it does not require source compilation (faster).
 The installer&rsquo;s pre-built binary is more frequently updated than the GitHub
@@ -656,7 +660,8 @@ at every commit.</p>
 <h3 id="download">Download</h3>
 <h4 id="installer">Using Installer Scripts</h4>
 <p>You can set up Sireum by downloading and running its initialization script as follows
-(<code>curl</code> is required; <code>DIR</code> can be set to another path for Sireum home bin directory).</p>
+(<code>curl</code> is required; <code>DIR</code> can be set to another path for Sireum home bin directory,
+best if the path does not contain any whitespace).</p>
 <h5 id="latest-release">Latest Release</h5>
 
 
@@ -692,7 +697,7 @@ at every commit.</p>
     
 </div>
 </div>
-<h5 id="for-courses">For CIS 301 &amp; 706/801, Fall 2024</h5>
+<h5 id="for-courses">For K-State CIS 301 &amp; 706/801, Fall 2024</h5>
 
 
 <div class="tab-panel">
@@ -762,10 +767,25 @@ at every commit.</p>
     
 </div>
 </div>
+<h5 id="notes">Notes</h5>
 <p>Note that this installation approach is using GitHub anonymous connection, thus subject to rate limiting.
-To remove the limit, set the <code>GITHUB_TOKEN</code> environment variable to one of your GitHub tokens.</p>
+To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to one of your GitHub tokens.</p>
 <p>To use a specific version of Sireum, replace <code>master</code> with a release version (&gt;= 4.202208*)
 listed at <a href="https://github.com/sireum/kekinian/releases">https://github.com/sireum/kekinian/releases</a> in the command line above.</p>
+<p>Set the <code>SIREUM_HOME</code> env var to the Sireum installation path, then proceed to <a href="#using-sireum">Using Sireum</a>.</p>
+<h4 id="github">Packaged Binaries</h4>
+<p>The packaged binary distribution files are available at:
+<a href="https://github.com/sireum/kekinian/releases">https://github.com/sireum/kekinian/releases</a></p>
+<p>Sireum binary distribution files are <a href="https://www.7-zip.org/7z.html">7z</a>
+<a href="https://en.wikipedia.org/wiki/Self-extracting_archive">self-extracting archives (SFX)</a>
+with command-line installers to (optionally) configure where Sireum should be
+installed.
+The files can also be extracted using a program capable of uncompressing <code>7z</code> archive
+such as <a href="https://www.7-zip.org/download.html">7-zip</a>.</p>
+<p>On macOS, you might need to &ldquo;un-quarantine&rdquo; the downloaded self-extracting executable
+before running it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">xattr -rd com.apple.quarantine &lt;PATH-TO&gt;/sireum-mac-*.7z.sfx
+</span></span></code></pre></div><p>Set the <code>SIREUM_HOME</code> env var to the Sireum installation path, then proceed to <a href="#using-sireum">Using Sireum</a>.</p>
 <h4 id="source">Git Source Distribution</h4>
 <h5 id="requirements">Requirements</h5>
 <ul>
@@ -842,7 +862,7 @@ Set the <code>SIREUM_HOME</code> env var to the <code>Sireum</code> path above.<
 Note that after a <code>setup</code> update, it is best to invalidate IntelliJ&rsquo;s cache files
 and restart by using IntelliJ&rsquo;s <code>File -&gt; Invalidate Caches...</code>
 menu item and select <code>Clear all file system cache and Local History</code>.</p>
-<h6 id="notes">Notes</h6>
+<h6 id="notes-1">Notes</h6>
 <ul>
 <li>
 <p>Occasionally, there might be new API used in <code>build.cmd</code> that is available

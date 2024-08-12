@@ -26,7 +26,7 @@
       <link>https://sireum.org/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://sireum.org/getting-started/</guid>
-      <description>Sireum can be retrieved using installers or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts.&#xA;Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster).</description>
+      <description>Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum&amp;rsquo;s GitHub Releases.&#xA;Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster).</description>
     </item>
     <item>
       <title>HAMR SysML v2</title>
