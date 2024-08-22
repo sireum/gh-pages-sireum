@@ -46,7 +46,7 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum’s GitHub Releases.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster).">
-  <meta itemprop="wordCount" content="1124">
+  <meta itemprop="wordCount" content="1179">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -768,7 +768,10 @@ best if the path does not contain any whitespace).</p>
 </div>
 </div>
 <h5 id="notes">Notes</h5>
-<p>Note that this installation approach is using GitHub anonymous connection, thus subject to rate limiting.
+<p>Note that in the case where some files are not downloaded properly (e.g., due to network issues),
+you can delete the offending file(s) in the <code>sireum</code> folder of your user home&rsquo;s <code>Downloads</code> folder
+(or, entirely delete the <code>Downloads</code> <code>sireum</code> folder).
+Also note that this installation approach is using GitHub anonymous connection, thus subject to rate limiting.
 To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to one of your GitHub tokens.</p>
 <p>To use a specific version of Sireum, replace <code>master</code> with a release version (&gt;= 4.202208*)
 listed at <a href="https://github.com/sireum/kekinian/releases">https://github.com/sireum/kekinian/releases</a> in the command line above.</p>
@@ -1095,6 +1098,7 @@ This is also similar for <code>build.cmd</code> in <code>bin</code>.</p>
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/acl2.cmd             <span class="c1"># https://www.cs.utexas.edu/users/moore/acl2/</span>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/alt-ergo.cmd         <span class="c1"># https://alt-ergo.ocamlpro.com/</span>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/antlrworks.cmd       <span class="c1"># https://slang.sireum.org/tools/pg/</span>
+</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/brave.cmd            <span class="c1"># https://brave.com/</span>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/clion.cmd            <span class="c1"># https://www.jetbrains.com/clion/</span>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/compcert.cmd         <span class="c1"># https://compcert.org/</span>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/coq.cmd              <span class="c1"># https://coq.inria.fr/</span>
@@ -1102,16 +1106,19 @@ This is also similar for <code>build.cmd</code> in <code>bin</code>.</p>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/graal-openjdk.cmd    <span class="c1"># https://www.graalvm.org/</span>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/isabelle.cmd         <span class="c1"># https://isabelle.in.tum.de/</span>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/rust.cmd             <span class="c1"># https://www.rust-lang.org/</span>
+</span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/install/vscodium.cmd         <span class="c1"># https://vscodium.com/</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="hamr-install" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\antlrworks.cmd         <span class="p">&amp;</span> :: https://slang.sireum.org/tools/pg/
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\brave.cmd              <span class="p">&amp;</span> :: https://brave.com/
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\clion.cmd              <span class="p">&amp;</span> :: https://www.jetbrains.com/clion/
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\graal.cmd              <span class="p">&amp;</span> :: https://www.graalvm.org/
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\graal-openjdk.cmd      <span class="p">&amp;</span> :: https://www.graalvm.org/
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\isabelle.cmd           <span class="p">&amp;</span> :: https://isabelle.in.tum.de/
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\rust.cmd               <span class="p">&amp;</span> :: https://www.rust-lang.org/
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum\vscodium.cmd           <span class="p">&amp;</span> :: https://vscodium.com/
 </span></span></code></pre></div>
     </div>
     
