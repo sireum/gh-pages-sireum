@@ -629,15 +629,15 @@
             </li>
           </ul>
         </li>
-      </ul>
-    </li>
-    <li><a href="#native-executable">Native Executable</a>
-      <ul>
         <li><a href="#hamr">Installing FMIDE+HAMR</a></li>
         <li><a href="#other-tools">Installing CLion, Coq, Isabelle, CompCert, and Other Tools</a></li>
       </ul>
     </li>
-    <li><a href="#using-sireum">Using Sireum</a></li>
+    <li><a href="#using-sireum">Using Sireum</a>
+      <ul>
+        <li><a href="#native-executable">Native Executable</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
                 </aside>
@@ -921,133 +921,6 @@ where <code>git status</code> indicates that its working tree is clean) and <cod
 <p>If all else fails, try recursively re-clone Sireum.</p>
 </li>
 </ul>
-<h3 id="native-executable">Native Executable</h3>
-<p>It is recommended to compile Sireum (and Slash build scripts) to native in certain situations in order to avoid JVM boot up time.</p>
-<p>First, install <a href="http://graalvm.org">GraalVM</a> <a href="https://www.graalvm.org/reference-manual/native-image/#prerequisites"><code>native-image</code>&rsquo;s prerequisites</a>
-(note: <code>native-image</code> for Windows requires Visual Studio Community/Enterprise);
-then, to build Sireum native executable:</p>
-
-
-<div class="tab-panel">
-    <div class="tab-nav">
-        
-        <button
-                data-tab-item="macOS/Linux"
-                data-tab-group="native"
-                class="tab-nav-button btn active"
-        onclick="switchTab(true, 'native','macOS\/Linux')"
-        >macOS/Linux</button>
-        
-        <button
-                data-tab-item="Windows &#43; Visual Studio (VS) 2022 Enterprise"
-                data-tab-group="native"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'native','Windows \u002b Visual Studio (VS) 2022 Enterprise')"
-        >Windows &#43; Visual Studio (VS) 2022 Enterprise</button>
-        
-        <button
-                data-tab-item="Windows &#43; VS 2019 Community"
-                data-tab-group="native"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'native','Windows \u002b VS 2019 Community')"
-        >Windows &#43; VS 2019 Community</button>
-        
-        <button
-                data-tab-item="Windows &#43; VS 2017 Community"
-                data-tab-group="native"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'native','Windows \u002b VS 2017 Community')"
-        >Windows &#43; VS 2017 Community</button>
-        
-    </div>
-    <div class="tab-content">
-        
-        <div data-tab-item="macOS/Linux" data-tab-group="native" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum --native
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="Windows &#43; Visual Studio (VS) 2022 Enterprise" data-tab-group="native" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum --native
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="Windows &#43; VS 2019 Community" data-tab-group="native" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum --native
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="Windows &#43; VS 2017 Community" data-tab-group="native" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum --native
-</span></span></code></pre></div>
-    </div>
-    
-</div>
-</div>
-<p>The compiled native binary is located at:
-
-
-<div class="tab-panel">
-    <div class="tab-nav">
-        
-        <button
-                data-tab-item="macOS"
-                data-tab-group="running-native"
-                class="tab-nav-button btn active"
-        onclick="switchTab(true, 'running-native','macOS')"
-        >macOS</button>
-        
-        <button
-                data-tab-item="Linux"
-                data-tab-group="running-native"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'running-native','Linux')"
-        >Linux</button>
-        
-        <button
-                data-tab-item="Linux arm64"
-                data-tab-group="running-native"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'running-native','Linux arm64')"
-        >Linux arm64</button>
-        
-        <button
-                data-tab-item="Windows"
-                data-tab-group="running-native"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'running-native','Windows')"
-        >Windows</button>
-        
-    </div>
-    <div class="tab-content">
-        
-        <div data-tab-item="macOS" data-tab-group="running-native" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/mac/sireum
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="Linux" data-tab-group="running-native" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/sireum
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="Linux arm64" data-tab-group="running-native" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/arm/sireum
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="Windows" data-tab-group="running-native" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\sireum.exe
-</span></span></code></pre></div>
-    </div>
-    
-</div>
-</div></p>
-<p>Note that once the native version is available (and has a newer timestamp),
-<code>sireum</code> and <code>sireum.bat</code> in <code>bin</code> call the native version.</p>
 <h4 id="hamr">Installing FMIDE+HAMR</h4>
 
 
@@ -1244,6 +1117,133 @@ then, to build Sireum native executable:</p>
 <p>Then, open the <code>logika-examples</code> directory in IVE and see
 Logika in action on some of the <code>.sc</code> example files.</p>
 <p>See <a href="https://doc.sireum.org">Sireum Documentation</a> for more information.</p>
+<h4 id="native-executable">Native Executable</h4>
+<p>It is recommended to compile Sireum (and Slash build scripts) to native in certain situations in order to avoid JVM boot up time.</p>
+<p>First, install <a href="http://graalvm.org">GraalVM</a> <a href="https://www.graalvm.org/reference-manual/native-image/#prerequisites"><code>native-image</code>&rsquo;s prerequisites</a>
+(note: <code>native-image</code> for Windows requires Visual Studio Community/Enterprise);
+then, to build Sireum native executable:</p>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS/Linux"
+                data-tab-group="native"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'native','macOS\/Linux')"
+        >macOS/Linux</button>
+        
+        <button
+                data-tab-item="Windows &#43; Visual Studio (VS) 2022 Enterprise"
+                data-tab-group="native"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'native','Windows \u002b Visual Studio (VS) 2022 Enterprise')"
+        >Windows &#43; Visual Studio (VS) 2022 Enterprise</button>
+        
+        <button
+                data-tab-item="Windows &#43; VS 2019 Community"
+                data-tab-group="native"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'native','Windows \u002b VS 2019 Community')"
+        >Windows &#43; VS 2019 Community</button>
+        
+        <button
+                data-tab-item="Windows &#43; VS 2017 Community"
+                data-tab-group="native"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'native','Windows \u002b VS 2017 Community')"
+        >Windows &#43; VS 2017 Community</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS/Linux" data-tab-group="native" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum --native
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows &#43; Visual Studio (VS) 2022 Enterprise" data-tab-group="native" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum --native
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows &#43; VS 2019 Community" data-tab-group="native" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum --native
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows &#43; VS 2017 Community" data-tab-group="native" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum --native
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div>
+<p>The compiled native binary is located at:
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS"
+                data-tab-group="running-native"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'running-native','macOS')"
+        >macOS</button>
+        
+        <button
+                data-tab-item="Linux"
+                data-tab-group="running-native"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'running-native','Linux')"
+        >Linux</button>
+        
+        <button
+                data-tab-item="Linux arm64"
+                data-tab-group="running-native"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'running-native','Linux arm64')"
+        >Linux arm64</button>
+        
+        <button
+                data-tab-item="Windows"
+                data-tab-group="running-native"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'running-native','Windows')"
+        >Windows</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS" data-tab-group="running-native" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/mac/sireum
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Linux" data-tab-group="running-native" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/sireum
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Linux arm64" data-tab-group="running-native" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/arm/sireum
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows" data-tab-group="running-native" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\sireum.exe
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div></p>
+<p>Note that once the native version is available (and has a newer timestamp),
+<code>sireum</code> and <code>sireum.bat</code> in <code>bin</code> call the native version.</p>
 
             </div>
         </article>
