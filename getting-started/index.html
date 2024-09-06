@@ -45,7 +45,7 @@
 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum’s GitHub Releases.">
-  <meta itemprop="wordCount" content="1179">
+  <meta itemprop="wordCount" content="1178">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -627,9 +627,12 @@
                 <li><a href="#notes-1">Notes</a></li>
               </ul>
             </li>
-            <li><a href="#native-executable">Native Executable</a></li>
           </ul>
         </li>
+      </ul>
+    </li>
+    <li><a href="#native-executable">Native Executable</a>
+      <ul>
         <li><a href="#hamr">Installing FMIDE+HAMR</a></li>
         <li><a href="#other-tools">Installing CLion, Coq, Isabelle, CompCert, and Other Tools</a></li>
       </ul>
@@ -918,8 +921,8 @@ where <code>git status</code> indicates that its working tree is clean) and <cod
 <p>If all else fails, try recursively re-clone Sireum.</p>
 </li>
 </ul>
-<h5 id="native-executable">Native Executable</h5>
-<p>It is recommended to compile Sireum (and Slash build scripts) to native as it removes JVM boot up time.</p>
+<h3 id="native-executable">Native Executable</h3>
+<p>It is recommended to compile Sireum (and Slash build scripts) to native in certain situations in order to avoid JVM boot up time.</p>
 <p>First, install <a href="http://graalvm.org">GraalVM</a> <a href="https://www.graalvm.org/reference-manual/native-image/#prerequisites"><code>native-image</code>&rsquo;s prerequisites</a>
 (note: <code>native-image</code> for Windows requires Visual Studio Community/Enterprise);
 then, to build Sireum native executable:</p>
@@ -960,25 +963,25 @@ then, to build Sireum native executable:</p>
     <div class="tab-content">
         
         <div data-tab-item="macOS/Linux" data-tab-group="native" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/build.cmd native
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum --native
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows &#43; Visual Studio (VS) 2022 Enterprise" data-tab-group="native" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\build.cmd native
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum --native
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows &#43; VS 2019 Community" data-tab-group="native" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\build.cmd native
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum --native
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows &#43; VS 2017 Community" data-tab-group="native" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">call</span> <span class="s2">&#34;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\build.cmd native
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum --native
 </span></span></code></pre></div>
     </div>
     
@@ -1005,6 +1008,13 @@ then, to build Sireum native executable:</p>
         >Linux</button>
         
         <button
+                data-tab-item="Linux arm64"
+                data-tab-group="running-native"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'running-native','Linux arm64')"
+        >Linux arm64</button>
+        
+        <button
                 data-tab-item="Windows"
                 data-tab-group="running-native"
                 class="tab-nav-button btn "
@@ -1024,6 +1034,11 @@ then, to build Sireum native executable:</p>
 </span></span></code></pre></div>
     </div>
     
+        <div data-tab-item="Linux arm64" data-tab-group="running-native" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/arm/sireum
+</span></span></code></pre></div>
+    </div>
+    
         <div data-tab-item="Windows" data-tab-group="running-native" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\sireum.exe
 </span></span></code></pre></div>
@@ -1032,8 +1047,7 @@ then, to build Sireum native executable:</p>
 </div>
 </div></p>
 <p>Note that once the native version is available (and has a newer timestamp),
-<code>sireum</code> and <code>sireum.bat</code> in <code>bin</code> call the native version.
-This is also similar for <code>build.cmd</code> in <code>bin</code>.</p>
+<code>sireum</code> and <code>sireum.bat</code> in <code>bin</code> call the native version.</p>
 <h4 id="hamr">Installing FMIDE+HAMR</h4>
 
 
@@ -1144,11 +1158,11 @@ This is also similar for <code>build.cmd</code> in <code>bin</code>.</p>
         >Linux</button>
         
         <button
-                data-tab-item="Linux (aarch64)"
+                data-tab-item="Linux arm64"
                 data-tab-group="using"
                 class="tab-nav-button btn "
-        onclick="switchTab(true, 'using','Linux (aarch64)')"
-        >Linux (aarch64)</button>
+        onclick="switchTab(true, 'using','Linux arm64')"
+        >Linux arm64</button>
         
         <button
                 data-tab-item="Windows"
@@ -1174,7 +1188,7 @@ This is also similar for <code>build.cmd</code> in <code>bin</code>.</p>
 </span></span></code></pre></div>
     </div>
     
-        <div data-tab-item="Linux (aarch64)" data-tab-group="using" class="tab-item ">
+        <div data-tab-item="Linux arm64" data-tab-group="using" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/sireum                      <span class="c1"># CLI</span>
 </span></span><span class="line"><span class="cl"><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span>/bin/linux/arm/idea/bin/IVE.sh   <span class="c1"># IVE</span>
 </span></span></code></pre></div>
