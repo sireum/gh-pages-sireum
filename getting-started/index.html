@@ -47,7 +47,7 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum’s GitHub Releases.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster). The installer’s pre-built binary is more frequently updated than the GitHub release binary distribution, and it is what is used to build Sireum itself at every commit.">
-  <meta itemprop="wordCount" content="1253">
+  <meta itemprop="wordCount" content="1265">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -778,9 +778,10 @@ Please see the <a href="#installer-notes">notes</a> section if the installation 
 <h5 id="installer-notes">Notes</h5>
 <p>Note that in the case where some files are not downloaded properly (e.g., due to network issues),
 you can delete the offending file(s) in the <code>sireum</code> folder of your user home&rsquo;s <code>Downloads</code> folder
-(or, entirely delete the <code>Downloads</code> <code>sireum</code> folder).
-Also note that this installation approach is using GitHub anonymous connection, thus subject to rate limiting.
+(or, entirely delete the <code>Downloads</code> <code>sireum</code> folder).</p>
+<p>Also note that this installation approach is using GitHub anonymous connection, thus subject to rate limiting.
 To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to one of your GitHub tokens.</p>
+<p>If the installation keeps failing, please use the packaged binaries described below.</p>
 <h4 id="github">Packaged Binaries</h4>
 <p>The packaged binary distribution files are available at:
 <a href="https://github.com/sireum/kekinian/releases">https://github.com/sireum/kekinian/releases</a></p>
