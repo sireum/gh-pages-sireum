@@ -47,7 +47,7 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum’s GitHub Releases.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster). The installer’s pre-built binary is more frequently updated than the GitHub release binary distribution, and it is what is used to build Sireum itself at every commit.">
-  <meta itemprop="wordCount" content="1339">
+  <meta itemprop="wordCount" content="1347">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -689,12 +689,12 @@ listed at <a href="https://github.com/sireum/kekinian/releases">https://github.c
     <div class="tab-content">
         
         <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241007.4d15c3f <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241011.21df31a <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20241007.4d15c3f&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20241011.21df31a&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
 </span></span></code></pre></div>
     </div>
     
@@ -789,19 +789,15 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
 <li>Releases: <a href="https://github.com/sireum/kekinian/releases">https://github.com/sireum/kekinian/releases</a></li>
 <li>Latest Development Build: <a href="https://github.com/sireum/kekinian/releases/tag/dev">https://github.com/sireum/kekinian/releases/tag/dev</a></li>
 </ul>
-<p>Sireum IVE binary distribution files are <a href="https://www.7-zip.org/7z.html">7z</a>
-<a href="https://en.wikipedia.org/wiki/Self-extracting_archive">self-extracting archives (SFX)</a>
-with command-line installers to (optionally) configure where Sireum should be
-installed.
-Note that the files can also be extracted using a program capable of uncompressing <code>7z</code> archive
-such as <a href="https://www.7-zip.org/download.html">7-zip</a>.</p>
-<p>Sireum CLI files are native executables built for specific platforms.
-On Windows, to run the native Sireum CLI, you need to install
+<p>The <code>sireum-ive</code> binary distribution files include both the IntelliJ-based and the VSCodium-based IVE,
+while the <code>sireum-ive-vscodium</code> only includes the latter.
+The <code>sireum-cli</code> files are compressed native executables built for specific platforms.
+On Windows, to run the native Sireum executable, you need to install
 <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist#latest-microsoft-visual-c-redistributable-version">Microsoft Visual C++ Redistributable</a>,
 if you have not already installed it.</p>
-<p>On macOS, you might need to &ldquo;un-quarantine&rdquo; the downloaded executable
+<p>On macOS, you might need to &ldquo;un-quarantine&rdquo; the downloaded files
 before running it:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">xattr -rd com.apple.quarantine <span class="s2">&#34;&lt;PATH-TO&gt;&#34;</span>/sireum-mac-*
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">xattr -rd com.apple.quarantine <span class="s2">&#34;&lt;PATH-TO&gt;&#34;</span>/sireum-*
 </span></span></code></pre></div><p>Set the <code>SIREUM_HOME</code> env var to the Sireum installation path, then proceed to <a href="#using-sireum">Using Sireum</a>.</p>
 <h4 id="source">Git Source Distribution</h4>
 <h5 id="requirements">Requirements</h5>
@@ -1011,7 +1007,6 @@ Sireum&rsquo;s Vagrantfile:</p>
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/install/isabelle.cmd&#34;</span>        <span class="c1"># https://isabelle.in.tum.de/</span>
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/install/rust.cmd&#34;</span>            <span class="c1"># https://www.rust-lang.org/</span>
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/install/rustrover.cmd&#34;</span>       <span class="c1"># https://www.jetbrains.com/rust/</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/install/vscodium.cmd&#34;</span>        <span class="c1"># https://vscodium.com/</span>
 </span></span></code></pre></div>
     </div>
     
@@ -1024,7 +1019,6 @@ Sireum&rsquo;s Vagrantfile:</p>
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum\isabelle.cmd&#34;</span>           <span class="p">&amp;</span> :: https://isabelle.in.tum.de/
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum\rust.cmd&#34;</span>               <span class="p">&amp;</span> :: https://www.rust-lang.org/
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum\rustrover.cmd&#34;</span>          <span class="p">&amp;</span> :: https://www.jetbrains.com/rust/
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum\vscodium.cmd&#34;</span>           <span class="p">&amp;</span> :: https://vscodium.com/
 </span></span></code></pre></div>
     </div>
     
@@ -1083,41 +1077,47 @@ Sireum&rsquo;s Vagrantfile:</p>
     <div class="tab-content">
         
         <div data-tab-item="macOS" data-tab-group="using" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                      <span class="c1"># CLI</span>
-</span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/idea/IVE.app&#34;</span>       <span class="c1"># IVE</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                           <span class="c1"># CLI</span>
+</span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/idea/IVE.app&#34;</span>            <span class="c1"># IntelliJ-based IVE</span>
+</span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/VSCodium.app&#34;</span>            <span class="c1"># VSCodium-based IVE</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="macOS amd64" data-tab-group="using" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                      <span class="c1"># CLI</span>
-</span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/idea/IVE.app&#34;</span>       <span class="c1"># IVE</span>
-</span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/fmide.app&#34;</span>          <span class="c1"># FMIDE+HAMR (see above for installation)</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                           <span class="c1"># CLI</span>
+</span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/idea/IVE.app&#34;</span>            <span class="c1"># IntelliJ-based IVE</span>
+</span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/VSCodium.app&#34;</span>            <span class="c1"># VSCodium-based IVE</span>
+</span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/fmide.app&#34;</span>               <span class="c1"># FMIDE+HAMR (see above for installation)</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Linux" data-tab-group="using" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                       <span class="c1"># CLI</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/idea/bin/IVE.sh&#34;</span>        <span class="c1"># IVE</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/fmide/fmide&#34;</span>            <span class="c1"># FMIDE+HAMR (see above for installation)</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                           <span class="c1"># CLI</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/idea/bin/IVE.sh&#34;</span>            <span class="c1"># IntelliJ-based IVE</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/vscodium/bin/codium&#34;</span>        <span class="c1"># VSCodium-based IVE</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/fmide/fmide&#34;</span>                <span class="c1"># FMIDE+HAMR (see above for installation)</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Linux arm64" data-tab-group="using" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                       <span class="c1"># CLI</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/arm/idea/bin/IVE.sh&#34;</span>    <span class="c1"># IVE</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                           <span class="c1"># CLI</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/arm/idea/bin/IVE.sh&#34;</span>        <span class="c1"># IntelliJ-based IVE</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/arm/vscodium/bin/codium&#34;</span>    <span class="c1"># VSCodium-based IVE</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="using" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum.bat&#34;</span>                    <span class="p">&amp;</span> :: CLI
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\win\idea\bin\IVE.exe&#34;</span>          <span class="p">&amp;</span> :: IVE
-</span></span><span class="line"><span class="cl"><span class="k">start</span> /B <span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\win\fmide\fmide.exe&#34;</span>  <span class="p">&amp;</span> :: FMIDE+HAMR (see above for installation)
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum.bat&#34;</span>                        <span class="p">&amp;</span> :: CLI
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\win\idea\bin\IVE.exe&#34;</span>              <span class="p">&amp;</span> :: IntelliJ-based IVE
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\win\vscodium\bin\codium.cmd&#34;</span>       <span class="p">&amp;</span> :: VSCodium-based IVE
+</span></span><span class="line"><span class="cl"><span class="k">start</span> /B <span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\win\fmide\fmide.exe&#34;</span>      <span class="p">&amp;</span> :: FMIDE+HAMR (see above for installation)
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows arm64" data-tab-group="using" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum.bat<span class="s2">&#34;                     &amp; :: CLI</span>
-</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\idea\bin\IVE.exe<span class="s2">&#34;           &amp; :: IVE</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum.bat<span class="s2">&#34;                         &amp; :: CLI</span>
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\idea\bin\IVE.exe<span class="s2">&#34;               &amp; :: IntelliJ-based IVE</span>
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\vscodium\bin\codium.cmd<span class="s2">&#34;        &amp; :: VSCodium-based IVE</span>
 </span></span></code></pre></div>
     </div>
     
