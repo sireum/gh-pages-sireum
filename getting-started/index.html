@@ -694,12 +694,12 @@ listed at <a href="https://github.com/sireum/kekinian/releases">https://github.c
     <div class="tab-content">
         
         <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241016.60c1a61 <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241017.f6e1eff <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20241016.60c1a61&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20241017.f6e1eff&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
 </span></span></code></pre></div>
     </div>
     
@@ -790,7 +790,7 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
 <p>If the installation keeps failing, please use the packaged binaries described below.</p>
 <h4 id="github">Packaged Binaries</h4>
 <h5 id="latest-release-1">Latest Release</h5>
-<p><a href="https://github.com/sireum/kekinian/releases/tag/4.20241016.60c1a61">https://github.com/sireum/kekinian/releases/tag/4.20241016.60c1a61</a></p>
+<p><a href="https://github.com/sireum/kekinian/releases/tag/4.20241017.f6e1eff">https://github.com/sireum/kekinian/releases/tag/4.20241017.f6e1eff</a></p>
 
 
 <div class="tab-panel">
@@ -828,50 +828,50 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
     <div class="tab-content">
         
         <div data-tab-item="macOS (arm64)" data-tab-group="binaries-release" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241016.60c1a61
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241017.f6e1eff
 </span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
 </span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-linux-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-linux-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
 </span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-linux-amd64.tar.xz
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.m2.zip
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="macOS (amd64)" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241016.60c1a61
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241017.f6e1eff
 </span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
 </span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-mac-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-mac-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
 </span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-mac-amd64.tar.xz
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.m2.zip
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Linux (amd64)" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241016.60c1a61
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241017.f6e1eff
 </span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
 </span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-linux-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-linux-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
 </span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-linux-amd64.tar.xz
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.m2.zip
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows (amd64)" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">SIREUM_V</span><span class="p">=</span>4.20241016.60c1a61
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">SIREUM_V</span><span class="p">=</span>4.20241017.f6e1eff
 </span></span><span class="line"><span class="cl"><span class="k">md</span> <span class="nv">%USERPROFILE%</span>\Applications <span class="nv">%USERPROFILE%</span>\Downloads <span class="mi">2</span><span class="p">&gt;</span> nul
 </span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/sireum-ive-win-amd64.zip
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.library.m2.zip  
 </span></span><span class="line"><span class="cl"><span class="k">cd</span> <span class="nv">%USERPROFILE%</span>\Applications
 </span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip
 </span></span><span class="line"><span class="cl"><span class="k">cd</span> <span class="nv">%USERPROFILE%</span>
-</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.m2.zip
+</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip
 </span></span></code></pre></div>
     </div>
     
@@ -919,11 +919,11 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>dev
 </span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
 </span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-linux-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-linux-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
 </span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-linux-amd64.tar.xz
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.m2.zip
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
 </span></span></code></pre></div>
     </div>
     
@@ -931,11 +931,11 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>dev
 </span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
 </span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-mac-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-mac-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
 </span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-mac-amd64.tar.xz
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.m2.zip
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
 </span></span></code></pre></div>
     </div>
     
@@ -943,11 +943,11 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>dev
 </span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
 </span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-linux-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-linux-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
 </span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-linux-amd64.tar.xz
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.m2.zip
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
 </span></span></code></pre></div>
     </div>
     
@@ -955,11 +955,11 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">SIREUM_V</span><span class="p">=</span>dev
 </span></span><span class="line"><span class="cl"><span class="k">md</span> <span class="nv">%USERPROFILE%</span>\Applications <span class="nv">%USERPROFILE%</span>\Downloads <span class="mi">2</span><span class="p">&gt;</span> nul
 </span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/sireum-ive-win-amd64.zip
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.library.m2.zip  
 </span></span><span class="line"><span class="cl"><span class="k">cd</span> <span class="nv">%USERPROFILE%</span>\Applications
 </span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip
 </span></span><span class="line"><span class="cl"><span class="k">cd</span> <span class="nv">%USERPROFILE%</span>
-</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.m2.zip
+</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip
 </span></span></code></pre></div>
     </div>
     
