@@ -47,7 +47,7 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum’s GitHub Releases.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster). The installer’s pre-built binary is more frequently updated than the GitHub release binary distribution, and it is what is used to build Sireum itself at every commit.">
-  <meta itemprop="wordCount" content="1347">
+  <meta itemprop="wordCount" content="1553">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -621,7 +621,12 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
             <li><a href="#installer-notes">Notes</a></li>
           </ul>
         </li>
-        <li><a href="#github">Packaged Binaries</a></li>
+        <li><a href="#github">Packaged Binaries</a>
+          <ul>
+            <li><a href="#latest-release-1">Latest Release</a></li>
+            <li><a href="#latest-development-build">Latest Development Build</a></li>
+          </ul>
+        </li>
         <li><a href="#source">Git Source Distribution</a>
           <ul>
             <li><a href="#requirements">Requirements</a></li>
@@ -784,11 +789,182 @@ you can delete the offending file(s) in the <code>sireum</code> folder of your u
 To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to one of your GitHub tokens.</p>
 <p>If the installation keeps failing, please use the packaged binaries described below.</p>
 <h4 id="github">Packaged Binaries</h4>
-<p>The packaged binary distribution files are available at:</p>
-<ul>
-<li>Releases: <a href="https://github.com/sireum/kekinian/releases">https://github.com/sireum/kekinian/releases</a></li>
-<li>Latest Development Build: <a href="https://github.com/sireum/kekinian/releases/tag/dev">https://github.com/sireum/kekinian/releases/tag/dev</a></li>
-</ul>
+<h5 id="latest-release-1">Latest Release</h5>
+<p><a href="https://github.com/sireum/kekinian/releases/tag/4.20241016.60c1a61">https://github.com/sireum/kekinian/releases/tag/4.20241016.60c1a61</a></p>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS (arm64)"
+                data-tab-group="binaries-release"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'binaries-release','macOS (arm64)')"
+        >macOS (arm64)</button>
+        
+        <button
+                data-tab-item="macOS (amd64)"
+                data-tab-group="binaries-release"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'binaries-release','macOS (amd64)')"
+        >macOS (amd64)</button>
+        
+        <button
+                data-tab-item="Linux (amd64)"
+                data-tab-group="binaries-release"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'binaries-release','Linux (amd64)')"
+        >Linux (amd64)</button>
+        
+        <button
+                data-tab-item="Windows (amd64)"
+                data-tab-group="binaries-release"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'binaries-release','Windows (amd64)')"
+        >Windows (amd64)</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS (arm64)" data-tab-group="binaries-release" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241016.60c1a61
+</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-linux-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-linux-amd64.tar.xz
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-linux-amd64.tar.xz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.m2.zip
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="macOS (amd64)" data-tab-group="binaries-release" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241016.60c1a61
+</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-mac-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-mac-amd64.tar.xz
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-mac-amd64.tar.xz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.m2.zip
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Linux (amd64)" data-tab-group="binaries-release" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241016.60c1a61
+</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-linux-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-linux-amd64.tar.xz
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-linux-amd64.tar.xz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.m2.zip
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows (amd64)" data-tab-group="binaries-release" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">SIREUM_V</span><span class="p">=</span>4.20241016.60c1a61
+</span></span><span class="line"><span class="cl"><span class="k">md</span> <span class="nv">%USERPROFILE%</span>\Applications <span class="nv">%USERPROFILE%</span>\Downloads <span class="mi">2</span><span class="p">&gt;</span> nul
+</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/sireum-ive-win-amd64.zip
+</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl"><span class="k">cd</span> <span class="nv">%USERPROFILE%</span>\Applications
+</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip
+</span></span><span class="line"><span class="cl"><span class="k">cd</span> <span class="nv">%USERPROFILE%</span>
+</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.m2.zip
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div>
+<h5 id="latest-development-build">Latest Development Build</h5>
+<p><a href="https://github.com/sireum/kekinian/releases/tag/dev">https://github.com/sireum/kekinian/releases/tag/dev</a></p>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS (arm64)"
+                data-tab-group="binaries-release"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'binaries-release','macOS (arm64)')"
+        >macOS (arm64)</button>
+        
+        <button
+                data-tab-item="macOS (amd64)"
+                data-tab-group="binaries-release"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'binaries-release','macOS (amd64)')"
+        >macOS (amd64)</button>
+        
+        <button
+                data-tab-item="Linux (amd64)"
+                data-tab-group="binaries-release"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'binaries-release','Linux (amd64)')"
+        >Linux (amd64)</button>
+        
+        <button
+                data-tab-item="Windows (amd64)"
+                data-tab-group="binaries-release"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'binaries-release','Windows (amd64)')"
+        >Windows (amd64)</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS (arm64)" data-tab-group="binaries-release" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>dev
+</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-linux-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-linux-amd64.tar.xz
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-linux-amd64.tar.xz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.m2.zip
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="macOS (amd64)" data-tab-group="binaries-release" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>dev
+</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-mac-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-mac-amd64.tar.xz
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-mac-amd64.tar.xz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.m2.zip
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Linux (amd64)" data-tab-group="binaries-release" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>dev
+</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-linux-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-linux-amd64.tar.xz
+</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-linux-amd64.tar.xz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.m2.zip
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows (amd64)" data-tab-group="binaries-release" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">SIREUM_V</span><span class="p">=</span>dev
+</span></span><span class="line"><span class="cl"><span class="k">md</span> <span class="nv">%USERPROFILE%</span>\Applications <span class="nv">%USERPROFILE%</span>\Downloads <span class="mi">2</span><span class="p">&gt;</span> nul
+</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/sireum-ive-win-amd64.zip
+</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.m2.zip  
+</span></span><span class="line"><span class="cl"><span class="k">cd</span> <span class="nv">%USERPROFILE%</span>\Applications
+</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip
+</span></span><span class="line"><span class="cl"><span class="k">cd</span> <span class="nv">%USERPROFILE%</span>
+</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.m2.zip
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div>
 <p>The <code>sireum-ive</code> binary distribution files include both the IntelliJ-based and the VSCodium-based IVE,
 while the <code>sireum-ive-vscodium</code> only includes the latter.
 The <code>sireum-cli</code> files are compressed native executables built for specific platforms.
@@ -943,28 +1119,28 @@ Sireum&rsquo;s Vagrantfile:</p>
     <div class="tab-nav">
         
         <button
-                data-tab-item="macOS/Linux amd64"
-                data-tab-group="hamr-install"
+                data-tab-item="macOS/Linux (amd64)"
+                data-tab-group="fmide-install"
                 class="tab-nav-button btn active"
-        onclick="switchTab(true, 'hamr-install','macOS\/Linux amd64')"
-        >macOS/Linux amd64</button>
+        onclick="switchTab(true, 'fmide-install','macOS\/Linux (amd64)')"
+        >macOS/Linux (amd64)</button>
         
         <button
-                data-tab-item="Windows amd64"
-                data-tab-group="hamr-install"
+                data-tab-item="Windows (amd64)"
+                data-tab-group="fmide-install"
                 class="tab-nav-button btn "
-        onclick="switchTab(true, 'hamr-install','Windows amd64')"
-        >Windows amd64</button>
+        onclick="switchTab(true, 'fmide-install','Windows (amd64)')"
+        >Windows (amd64)</button>
         
     </div>
     <div class="tab-content">
         
-        <div data-tab-item="macOS/Linux amd64" data-tab-group="hamr-install" class="tab-item active">
+        <div data-tab-item="macOS/Linux (amd64)" data-tab-group="fmide-install" class="tab-item active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/install/fmide.cmd&#34;</span>
 </span></span></code></pre></div>
     </div>
     
-        <div data-tab-item="Windows amd64" data-tab-group="hamr-install" class="tab-item ">
+        <div data-tab-item="Windows (amd64)" data-tab-group="fmide-install" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum\fmide.cmd&#34;</span>
 </span></span></code></pre></div>
     </div>
@@ -979,22 +1155,22 @@ Sireum&rsquo;s Vagrantfile:</p>
         
         <button
                 data-tab-item="macOS/Linux"
-                data-tab-group="hamr-install"
+                data-tab-group="other-install"
                 class="tab-nav-button btn active"
-        onclick="switchTab(true, 'hamr-install','macOS\/Linux')"
+        onclick="switchTab(true, 'other-install','macOS\/Linux')"
         >macOS/Linux</button>
         
         <button
                 data-tab-item="Windows"
-                data-tab-group="hamr-install"
+                data-tab-group="other-install"
                 class="tab-nav-button btn "
-        onclick="switchTab(true, 'hamr-install','Windows')"
+        onclick="switchTab(true, 'other-install','Windows')"
         >Windows</button>
         
     </div>
     <div class="tab-content">
         
-        <div data-tab-item="macOS/Linux" data-tab-group="hamr-install" class="tab-item active">
+        <div data-tab-item="macOS/Linux" data-tab-group="other-install" class="tab-item active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/install/acl2.cmd&#34;</span>            <span class="c1"># https://www.cs.utexas.edu/users/moore/acl2/</span>
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/install/alt-ergo.cmd&#34;</span>        <span class="c1"># https://alt-ergo.ocamlpro.com/</span>
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/install/antlrworks.cmd&#34;</span>      <span class="c1"># https://slang.sireum.org/tools/pg/</span>
@@ -1010,7 +1186,7 @@ Sireum&rsquo;s Vagrantfile:</p>
 </span></span></code></pre></div>
     </div>
     
-        <div data-tab-item="Windows" data-tab-group="hamr-install" class="tab-item ">
+        <div data-tab-item="Windows" data-tab-group="other-install" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum\antlrworks.cmd&#34;</span>         <span class="p">&amp;</span> :: https://slang.sireum.org/tools/pg/
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum\brave.cmd&#34;</span>              <span class="p">&amp;</span> :: https://brave.com/
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum\clion.cmd&#34;</span>              <span class="p">&amp;</span> :: https://www.jetbrains.com/clion/
@@ -1032,58 +1208,58 @@ Sireum&rsquo;s Vagrantfile:</p>
     <div class="tab-nav">
         
         <button
-                data-tab-item="macOS"
-                data-tab-group="using"
+                data-tab-item="macOS (arm64)"
+                data-tab-group="using-sireum"
                 class="tab-nav-button btn active"
-        onclick="switchTab(true, 'using','macOS')"
-        >macOS</button>
+        onclick="switchTab(true, 'using-sireum','macOS (arm64)')"
+        >macOS (arm64)</button>
         
         <button
-                data-tab-item="macOS amd64"
-                data-tab-group="using"
+                data-tab-item="macOS (amd64)"
+                data-tab-group="using-sireum"
                 class="tab-nav-button btn "
-        onclick="switchTab(true, 'using','macOS amd64')"
-        >macOS amd64</button>
+        onclick="switchTab(true, 'using-sireum','macOS (amd64)')"
+        >macOS (amd64)</button>
         
         <button
-                data-tab-item="Linux"
-                data-tab-group="using"
+                data-tab-item="Linux (amd64)"
+                data-tab-group="using-sireum"
                 class="tab-nav-button btn "
-        onclick="switchTab(true, 'using','Linux')"
-        >Linux</button>
+        onclick="switchTab(true, 'using-sireum','Linux (amd64)')"
+        >Linux (amd64)</button>
         
         <button
-                data-tab-item="Linux arm64"
-                data-tab-group="using"
+                data-tab-item="Linux (arm64)"
+                data-tab-group="using-sireum"
                 class="tab-nav-button btn "
-        onclick="switchTab(true, 'using','Linux arm64')"
-        >Linux arm64</button>
+        onclick="switchTab(true, 'using-sireum','Linux (arm64)')"
+        >Linux (arm64)</button>
         
         <button
-                data-tab-item="Windows"
-                data-tab-group="using"
+                data-tab-item="Windows (amd64)"
+                data-tab-group="using-sireum"
                 class="tab-nav-button btn "
-        onclick="switchTab(true, 'using','Windows')"
-        >Windows</button>
+        onclick="switchTab(true, 'using-sireum','Windows (amd64)')"
+        >Windows (amd64)</button>
         
         <button
-                data-tab-item="Windows arm64"
-                data-tab-group="using"
+                data-tab-item="Windows (arm64)"
+                data-tab-group="using-sireum"
                 class="tab-nav-button btn "
-        onclick="switchTab(true, 'using','Windows arm64')"
-        >Windows arm64</button>
+        onclick="switchTab(true, 'using-sireum','Windows (arm64)')"
+        >Windows (arm64)</button>
         
     </div>
     <div class="tab-content">
         
-        <div data-tab-item="macOS" data-tab-group="using" class="tab-item active">
+        <div data-tab-item="macOS (arm64)" data-tab-group="using-sireum" class="tab-item active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                           <span class="c1"># CLI</span>
 </span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/idea/IVE.app&#34;</span>            <span class="c1"># IntelliJ-based IVE</span>
 </span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/VSCodium.app&#34;</span>            <span class="c1"># VSCodium-based IVE</span>
 </span></span></code></pre></div>
     </div>
     
-        <div data-tab-item="macOS amd64" data-tab-group="using" class="tab-item ">
+        <div data-tab-item="macOS (amd64)" data-tab-group="using-sireum" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                           <span class="c1"># CLI</span>
 </span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/idea/IVE.app&#34;</span>            <span class="c1"># IntelliJ-based IVE</span>
 </span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/VSCodium.app&#34;</span>            <span class="c1"># VSCodium-based IVE</span>
@@ -1091,7 +1267,7 @@ Sireum&rsquo;s Vagrantfile:</p>
 </span></span></code></pre></div>
     </div>
     
-        <div data-tab-item="Linux" data-tab-group="using" class="tab-item ">
+        <div data-tab-item="Linux (amd64)" data-tab-group="using-sireum" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                           <span class="c1"># CLI</span>
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/idea/bin/IVE.sh&#34;</span>            <span class="c1"># IntelliJ-based IVE</span>
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/vscodium/bin/codium&#34;</span>        <span class="c1"># VSCodium-based IVE</span>
@@ -1099,14 +1275,14 @@ Sireum&rsquo;s Vagrantfile:</p>
 </span></span></code></pre></div>
     </div>
     
-        <div data-tab-item="Linux arm64" data-tab-group="using" class="tab-item ">
+        <div data-tab-item="Linux (arm64)" data-tab-group="using-sireum" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                           <span class="c1"># CLI</span>
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/arm/idea/bin/IVE.sh&#34;</span>        <span class="c1"># IntelliJ-based IVE</span>
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/arm/vscodium/bin/codium&#34;</span>    <span class="c1"># VSCodium-based IVE</span>
 </span></span></code></pre></div>
     </div>
     
-        <div data-tab-item="Windows" data-tab-group="using" class="tab-item ">
+        <div data-tab-item="Windows (amd64)" data-tab-group="using-sireum" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum.bat&#34;</span>                        <span class="p">&amp;</span> :: CLI
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\win\idea\bin\IVE.exe&#34;</span>              <span class="p">&amp;</span> :: IntelliJ-based IVE
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\win\vscodium\bin\codium.cmd&#34;</span>       <span class="p">&amp;</span> :: VSCodium-based IVE
@@ -1114,7 +1290,7 @@ Sireum&rsquo;s Vagrantfile:</p>
 </span></span></code></pre></div>
     </div>
     
-        <div data-tab-item="Windows arm64" data-tab-group="using" class="tab-item ">
+        <div data-tab-item="Windows (arm64)" data-tab-group="using-sireum" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum.bat<span class="s2">&#34;                         &amp; :: CLI</span>
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\idea\bin\IVE.exe<span class="s2">&#34;               &amp; :: IntelliJ-based IVE</span>
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\vscodium\bin\codium.cmd<span class="s2">&#34;        &amp; :: VSCodium-based IVE</span>
