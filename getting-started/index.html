@@ -47,7 +47,7 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum’s GitHub Releases.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster). The installer’s pre-built binary is more frequently updated than the GitHub release binary distribution, and it is what is used to build Sireum itself at every commit.">
-  <meta itemprop="wordCount" content="1542">
+  <meta itemprop="wordCount" content="1544">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -623,8 +623,8 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
         </li>
         <li><a href="#github">Packaged Binaries</a>
           <ul>
-            <li><a href="#latest-release-1">Latest Release</a></li>
-            <li><a href="#latest-development-build">Latest Development Build</a></li>
+            <li><a href="#latest-release-bin">Latest Release</a></li>
+            <li><a href="#latest-dev-bin">Latest Development Build</a></li>
           </ul>
         </li>
         <li><a href="#source">Git Source Distribution</a>
@@ -789,7 +789,7 @@ you can delete the offending file(s) in the <code>sireum</code> folder of your u
 To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to one of your GitHub tokens.</p>
 <p>If the installation keeps failing, please use the packaged binaries described below.</p>
 <h4 id="github">Packaged Binaries</h4>
-<h5 id="latest-release-1">Latest Release</h5>
+<h5 id="latest-release-bin">Latest Release</h5>
 <p><a href="https://github.com/sireum/kekinian/releases/tag/4.20241017.f6e1eff">https://github.com/sireum/kekinian/releases/tag/4.20241017.f6e1eff</a></p>
 
 
@@ -877,7 +877,7 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
     
 </div>
 </div>
-<h5 id="latest-development-build">Latest Development Build</h5>
+<h5 id="latest-dev-bin">Latest Development Build</h5>
 <p><a href="https://github.com/sireum/kekinian/releases/tag/dev">https://github.com/sireum/kekinian/releases/tag/dev</a></p>
 
 
@@ -1325,12 +1325,14 @@ Sireum&rsquo;s Vagrantfile:</p>
         
         <div data-tab-item="macOS/Linux" data-tab-group="example" class="tab-item active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone https://github.com/sireum/logika-examples
+</span></span><span class="line"><span class="cl">logika-examples/bin/verify.cmd
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span> proyek ive logika-examples
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="example" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">git clone https://github.com/sireum/logika-examples
+</span></span><span class="line"><span class="cl">logika-examples\bin\verify.cmd
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum.bat&#34;</span> proyek ive logika-examples
 </span></span></code></pre></div>
     </div>
