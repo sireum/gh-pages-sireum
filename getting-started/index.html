@@ -47,7 +47,7 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum’s GitHub Releases.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster). The installer’s pre-built binary is more frequently updated than the GitHub release binary distribution, and it is what is used to build Sireum itself at every commit.">
-  <meta itemprop="wordCount" content="1596">
+  <meta itemprop="wordCount" content="1600">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -868,9 +868,9 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
 </span></span><span class="line"><span class="cl"><span class="k">md</span> <span class="nv">%USERPROFILE%</span>\Applications <span class="nv">%USERPROFILE%</span>\Downloads <span class="mi">2</span><span class="p">&gt;</span> nul
 </span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/sireum-ive-win-amd64.zip
 </span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="k">cd</span> <span class="nv">%USERPROFILE%</span>\Applications
+</span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>\Applications
 </span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip
-</span></span><span class="line"><span class="cl"><span class="k">cd</span> <span class="nv">%USERPROFILE%</span>
+</span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>
 </span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip
 </span></span></code></pre></div>
     </div>
@@ -956,9 +956,9 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
 </span></span><span class="line"><span class="cl"><span class="k">md</span> <span class="nv">%USERPROFILE%</span>\Applications <span class="nv">%USERPROFILE%</span>\Downloads <span class="mi">2</span><span class="p">&gt;</span> nul
 </span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/sireum-ive-win-amd64.zip
 </span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="k">cd</span> <span class="nv">%USERPROFILE%</span>\Applications
+</span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>\Applications
 </span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip
-</span></span><span class="line"><span class="cl"><span class="k">cd</span> <span class="nv">%USERPROFILE%</span>
+</span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>
 </span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip
 </span></span></code></pre></div>
     </div>
