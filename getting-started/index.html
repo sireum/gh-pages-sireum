@@ -47,7 +47,7 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum’s GitHub Releases.
 Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster). The installer’s pre-built binary is more frequently updated than the GitHub release binary distribution, and it is what is used to build Sireum itself at every commit.">
-  <meta itemprop="wordCount" content="1600">
+  <meta itemprop="wordCount" content="1608">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -694,12 +694,12 @@ listed at <a href="https://github.com/sireum/kekinian/releases">https://github.c
     <div class="tab-content">
         
         <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241017.f6e1eff <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241024.6da7a54 <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20241017.f6e1eff&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20241024.6da7a54&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
 </span></span></code></pre></div>
     </div>
     
@@ -790,7 +790,7 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
 <p>If the installation keeps failing, please use the packaged binaries described below.</p>
 <h4 id="github">Packaged Binaries</h4>
 <h5 id="latest-release-bin">Latest Release</h5>
-<p><a href="https://github.com/sireum/kekinian/releases/tag/4.20241017.f6e1eff">https://github.com/sireum/kekinian/releases/tag/4.20241017.f6e1eff</a></p>
+<p><a href="https://github.com/sireum/kekinian/releases/tag/4.20241024.6da7a54">https://github.com/sireum/kekinian/releases/tag/4.20241024.6da7a54</a></p>
 
 
 <div class="tab-panel">
@@ -828,7 +828,7 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
     <div class="tab-content">
         
         <div data-tab-item="macOS" data-tab-group="binaries-release" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241017.f6e1eff
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241024.6da7a54
 </span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
 </span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-mac-arm64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-mac-arm64.tar.xz
 </span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
@@ -840,7 +840,7 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
     </div>
     
         <div data-tab-item="macOS (amd64)" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241017.f6e1eff
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241024.6da7a54
 </span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
 </span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-mac-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-mac-amd64.tar.xz
 </span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
@@ -852,7 +852,7 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
     </div>
     
         <div data-tab-item="Linux" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241017.f6e1eff
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241024.6da7a54
 </span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
 </span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-linux-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-linux-amd64.tar.xz
 </span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
@@ -864,12 +864,13 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
     </div>
     
         <div data-tab-item="Windows" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">SIREUM_V</span><span class="p">=</span>4.20241017.f6e1eff
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">SIREUM_V</span><span class="p">=</span>4.20241024.6da7a54
 </span></span><span class="line"><span class="cl"><span class="k">md</span> <span class="nv">%USERPROFILE%</span>\Applications <span class="nv">%USERPROFILE%</span>\Downloads <span class="mi">2</span><span class="p">&gt;</span> nul
 </span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/sireum-ive-win-amd64.zip
 </span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.library.m2.zip  
+</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\7zr-24.08.exe https://github.com/ip7z/7zip/releases/download/24.08/7zr.exe 
 </span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>\Applications
-</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip
+</span></span><span class="line"><span class="cl"><span class="nv">%USERPROFILE%</span>\Downloads\7zr-24.08.exe x <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.7z
 </span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>
 </span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip
 </span></span></code></pre></div>
@@ -956,8 +957,9 @@ To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to on
 </span></span><span class="line"><span class="cl"><span class="k">md</span> <span class="nv">%USERPROFILE%</span>\Applications <span class="nv">%USERPROFILE%</span>\Downloads <span class="mi">2</span><span class="p">&gt;</span> nul
 </span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/sireum-ive-win-amd64.zip
 </span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.library.m2.zip  
+</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\7zr-24.08.exe https://github.com/ip7z/7zip/releases/download/24.08/7zr.exe 
 </span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>\Applications
-</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip
+</span></span><span class="line"><span class="cl"><span class="nv">%USERPROFILE%</span>\Downloads\7zr-24.08.exe x <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.7z
 </span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>
 </span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip
 </span></span></code></pre></div>
