@@ -5,8 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum&rsquo;s GitHub Releases.
-Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster). The installer&rsquo;s pre-built binary is more frequently updated than the GitHub release binary distribution, and it is what is used to build Sireum itself at every commit.
+<meta name="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the latest packaged binary release, (or using the installer scripts for older releases). The package binary release includes a Sireum native executable that voids JVM boot-up time.
 " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
@@ -45,16 +44,14 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
 
 
   <meta itemprop="name" content="Getting Started">
-  <meta itemprop="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum’s GitHub Releases.
-Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster). The installer’s pre-built binary is more frequently updated than the GitHub release binary distribution, and it is what is used to build Sireum itself at every commit.">
-  <meta itemprop="wordCount" content="1542">
+  <meta itemprop="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the latest packaged binary release, (or using the installer scripts for older releases). The package binary release includes a Sireum native executable that voids JVM boot-up time.">
+  <meta itemprop="wordCount" content="1508">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://sireum.org/">
   <meta name="twitter:title" content="Getting Started">
-  <meta name="twitter:description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the installer scripts, or download from Sireum’s GitHub Releases.
-Note that, the latest pre-built binary installed by the scripts might be behind the latest source commit, but it does not require source compilation (faster). The installer’s pre-built binary is more frequently updated than the GitHub release binary distribution, and it is what is used to build Sireum itself at every commit.">
+  <meta name="twitter:description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the latest packaged binary release, (or using the installer scripts for older releases). The package binary release includes a Sireum native executable that voids JVM boot-up time.">
 
 
 
@@ -613,18 +610,18 @@ Note that, the latest pre-built binary installed by the scripts might be behind 
   <ul>
     <li><a href="#download">Download</a>
       <ul>
+        <li><a href="#github">Packaged Binaries</a>
+          <ul>
+            <li><a href="#latest-release-bin">Latest Release</a></li>
+            <li><a href="#latest-dev-bin">Latest Development Build</a></li>
+          </ul>
+        </li>
         <li><a href="#installer">Using Installer Scripts</a>
           <ul>
             <li><a href="#latest-release">Latest Release</a></li>
             <li><a href="#for-courses">For K-State CIS 301 &amp; 706/801, Fall 2024</a></li>
             <li><a href="#latest-dev">Latest Development Build</a></li>
             <li><a href="#installer-notes">Notes</a></li>
-          </ul>
-        </li>
-        <li><a href="#github">Packaged Binaries</a>
-          <ul>
-            <li><a href="#latest-release-bin">Latest Release</a></li>
-            <li><a href="#latest-dev-bin">Latest Development Build</a></li>
           </ul>
         </li>
         <li><a href="#source">Git Source Distribution</a>
@@ -657,137 +654,10 @@ The main advantage of using the source distribution is that updates
 can be done incrementally while the binary distribution requires complete
 re-installation. On the other hand, source distribution requires more setup.
 The source distribution should be used by Sireum developers and code contributors,
-while users are recommended to use the installer scripts, or download from
-Sireum&rsquo;s <a href="#github">GitHub Releases</a>.</p>
-<p>Note that, the latest pre-built binary installed by the scripts might be behind
-the latest source commit, but it does not require source compilation (faster).
-The installer&rsquo;s pre-built binary is more frequently updated than the GitHub
-release binary distribution, and it is what is used to build Sireum itself
-at every commit.</p>
+while users are recommended to use the <a href="#latest-release-bin">latest packaged binary release</a>,
+(or using the installer scripts for older releases).
+The package binary release includes a Sireum native executable that voids JVM boot-up time.</p>
 <h3 id="download">Download</h3>
-<h4 id="installer">Using Installer Scripts</h4>
-<p>You can set up Sireum by downloading and running its initialization script as follows
-(<code>curl</code> is required; <code>DIR</code> can be set to another path for Sireum home directory).
-To use a specific version of Sireum, set <code>SIREUM_V</code> with a release version
-listed at <a href="https://github.com/sireum/kekinian/releases">https://github.com/sireum/kekinian/releases</a> in the command lines below.</p>
-<h5 id="latest-release">Latest Release</h5>
-
-
-<div class="tab-panel">
-    <div class="tab-nav">
-        
-        <button
-                data-tab-item="macOS/Linux"
-                data-tab-group="installer-script"
-                class="tab-nav-button btn active"
-        onclick="switchTab(true, 'installer-script','macOS\/Linux')"
-        >macOS/Linux</button>
-        
-        <button
-                data-tab-item="Windows"
-                data-tab-group="installer-script"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'installer-script','Windows')"
-        >Windows</button>
-        
-    </div>
-    <div class="tab-content">
-        
-        <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241028.60464f2 <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20241028.60464f2&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
-</span></span></code></pre></div>
-    </div>
-    
-</div>
-</div>
-<p>Set the <code>SIREUM_HOME</code> env var to the Sireum installation path, then proceed to <a href="#using-sireum">Using Sireum</a>.
-Please see the <a href="#installer-notes">notes</a> section if the installation failed.</p>
-<h5 id="for-courses">For K-State CIS 301 &amp; 706/801, Fall 2024</h5>
-
-
-<div class="tab-panel">
-    <div class="tab-nav">
-        
-        <button
-                data-tab-item="macOS/Linux"
-                data-tab-group="installer-script"
-                class="tab-nav-button btn active"
-        onclick="switchTab(true, 'installer-script','macOS\/Linux')"
-        >macOS/Linux</button>
-        
-        <button
-                data-tab-item="Windows"
-                data-tab-group="installer-script"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'installer-script','Windows')"
-        >Windows</button>
-        
-    </div>
-    <div class="tab-content">
-        
-        <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241017.f6e1eff <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20241017.f6e1eff&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
-</span></span></code></pre></div>
-    </div>
-    
-</div>
-</div>
-<p>Set the <code>SIREUM_HOME</code> env var to the Sireum installation path, then proceed to <a href="#using-sireum">Using Sireum</a>.
-Please see the <a href="#installer-notes">notes</a> section if the installation failed.</p>
-<h5 id="latest-dev">Latest Development Build</h5>
-
-
-<div class="tab-panel">
-    <div class="tab-nav">
-        
-        <button
-                data-tab-item="macOS/Linux"
-                data-tab-group="installer-script"
-                class="tab-nav-button btn active"
-        onclick="switchTab(true, 'installer-script','macOS\/Linux')"
-        >macOS/Linux</button>
-        
-        <button
-                data-tab-item="Windows"
-                data-tab-group="installer-script"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'installer-script','Windows')"
-        >Windows</button>
-        
-    </div>
-    <div class="tab-content">
-        
-        <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>master <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=master&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
-</span></span></code></pre></div>
-    </div>
-    
-</div>
-</div>
-<p>Set the <code>SIREUM_HOME</code> env var to the Sireum installation path, then proceed to <a href="#using-sireum">Using Sireum</a>.
-Please see the <a href="#installer-notes">notes</a> section if the installation failed.</p>
-<h5 id="installer-notes">Notes</h5>
-<p>Note that in the case where some files are not downloaded properly (e.g., due to network issues),
-you can delete the offending file(s) in the <code>sireum</code> folder of your user home&rsquo;s <code>Downloads</code> folder
-(or, entirely delete the <code>Downloads</code> <code>sireum</code> folder).</p>
-<p>Also note that this installation approach is using GitHub anonymous connection, thus subject to rate limiting.
-To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to one of your GitHub tokens.</p>
-<p>If the installation keeps failing, please use the packaged binaries described below.</p>
 <h4 id="github">Packaged Binaries</h4>
 <h5 id="latest-release-bin">Latest Release</h5>
 <p><a href="https://github.com/sireum/kekinian/releases/tag/4.20241028.60464f2">https://github.com/sireum/kekinian/releases/tag/4.20241028.60464f2</a></p>
@@ -979,6 +849,129 @@ before using them:</p>
 </span></span></code></pre></div></li>
 </ul>
 <p>Set the <code>SIREUM_HOME</code> env var to the Sireum installation path, then proceed to <a href="#using-sireum">Using Sireum</a>.</p>
+<h4 id="installer">Using Installer Scripts</h4>
+<p>You can set up Sireum by downloading and running its initialization script as follows
+(<code>curl</code> is required; <code>DIR</code> can be set to another path for Sireum home directory).
+To use a specific version of Sireum, set <code>SIREUM_V</code> with a release version
+listed at <a href="https://github.com/sireum/kekinian/releases">https://github.com/sireum/kekinian/releases</a> in the command lines below.</p>
+<h5 id="latest-release">Latest Release</h5>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS/Linux"
+                data-tab-group="installer-script"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'installer-script','macOS\/Linux')"
+        >macOS/Linux</button>
+        
+        <button
+                data-tab-item="Windows"
+                data-tab-group="installer-script"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'installer-script','Windows')"
+        >Windows</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241028.60464f2 <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20241028.60464f2&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div>
+<p>Set the <code>SIREUM_HOME</code> env var to the Sireum installation path, then proceed to <a href="#using-sireum">Using Sireum</a>.
+Please see the <a href="#installer-notes">notes</a> section if the installation failed.</p>
+<h5 id="for-courses">For K-State CIS 301 &amp; 706/801, Fall 2024</h5>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS/Linux"
+                data-tab-group="installer-script"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'installer-script','macOS\/Linux')"
+        >macOS/Linux</button>
+        
+        <button
+                data-tab-item="Windows"
+                data-tab-group="installer-script"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'installer-script','Windows')"
+        >Windows</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241017.f6e1eff <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20241017.f6e1eff&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div>
+<p>Set the <code>SIREUM_HOME</code> env var to the Sireum installation path, then proceed to <a href="#using-sireum">Using Sireum</a>.
+Please see the <a href="#installer-notes">notes</a> section if the installation failed.</p>
+<h5 id="latest-dev">Latest Development Build</h5>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+        
+        <button
+                data-tab-item="macOS/Linux"
+                data-tab-group="installer-script"
+                class="tab-nav-button btn active"
+        onclick="switchTab(true, 'installer-script','macOS\/Linux')"
+        >macOS/Linux</button>
+        
+        <button
+                data-tab-item="Windows"
+                data-tab-group="installer-script"
+                class="tab-nav-button btn "
+        onclick="switchTab(true, 'installer-script','Windows')"
+        >Windows</button>
+        
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>master <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+</span></span></code></pre></div>
+    </div>
+    
+        <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=master&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
+</span></span></code></pre></div>
+    </div>
+    
+</div>
+</div>
+<p>Set the <code>SIREUM_HOME</code> env var to the Sireum installation path, then proceed to <a href="#using-sireum">Using Sireum</a>.
+Please see the <a href="#installer-notes">notes</a> section if the installation failed.</p>
+<h5 id="installer-notes">Notes</h5>
+<p>Note that in the case where some files are not downloaded properly (e.g., due to network issues),
+you can delete the offending file(s) in the <code>sireum</code> folder of your user home&rsquo;s <code>Downloads</code> folder
+(or, entirely delete the <code>Downloads</code> <code>sireum</code> folder).</p>
+<p>Also note that this installation approach is using GitHub anonymous connection, thus subject to rate limiting.
+To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to one of your GitHub tokens.</p>
+<p>If the installation keeps failing, please use the packaged binaries described below.</p>
 <h4 id="source">Git Source Distribution</h4>
 <h5 id="requirements">Requirements</h5>
 <ul>
@@ -1259,14 +1252,14 @@ Sireum&rsquo;s Vagrantfile:</p>
         <div data-tab-item="macOS" data-tab-group="using-sireum" class="tab-item active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                           <span class="c1"># CLI</span>
 </span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/idea/IVE.app&#34;</span>            <span class="c1"># IntelliJ-based IVE</span>
-</span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/VSCodium.app&#34;</span>            <span class="c1"># VSCodium-based IVE</span>
+</span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/vscodium/CodeIVE.app&#34;</span>    <span class="c1"># VSCodium-based IVE</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="macOS (amd64)" data-tab-group="using-sireum" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                           <span class="c1"># CLI</span>
 </span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/idea/IVE.app&#34;</span>            <span class="c1"># IntelliJ-based IVE</span>
-</span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/VSCodium.app&#34;</span>            <span class="c1"># VSCodium-based IVE</span>
+</span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/vscodium/CodeIVE.app&#34;</span>    <span class="c1"># VSCodium-based IVE</span>
 </span></span><span class="line"><span class="cl">open <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/mac/fmide.app&#34;</span>               <span class="c1"># FMIDE+HAMR (see above for installation)</span>
 </span></span></code></pre></div>
     </div>
@@ -1274,7 +1267,7 @@ Sireum&rsquo;s Vagrantfile:</p>
         <div data-tab-item="Linux" data-tab-group="using-sireum" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                           <span class="c1"># CLI</span>
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/idea/bin/IVE.sh&#34;</span>            <span class="c1"># IntelliJ-based IVE</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/vscodium/bin/codium&#34;</span>        <span class="c1"># VSCodium-based IVE</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/vscodium/bin/codeive&#34;</span>       <span class="c1"># VSCodium-based IVE</span>
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/fmide/fmide&#34;</span>                <span class="c1"># FMIDE+HAMR (see above for installation)</span>
 </span></span></code></pre></div>
     </div>
@@ -1282,14 +1275,14 @@ Sireum&rsquo;s Vagrantfile:</p>
         <div data-tab-item="Linux (arm64)" data-tab-group="using-sireum" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span>                           <span class="c1"># CLI</span>
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/arm/idea/bin/IVE.sh&#34;</span>        <span class="c1"># IntelliJ-based IVE</span>
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/arm/vscodium/bin/codium&#34;</span>    <span class="c1"># VSCodium-based IVE</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/linux/arm/vscodium/bin/codeive&#34;</span>   <span class="c1"># VSCodium-based IVE</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="using-sireum" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum.bat&#34;</span>                        <span class="p">&amp;</span> :: CLI
 </span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\win\idea\bin\IVE.exe&#34;</span>              <span class="p">&amp;</span> :: IntelliJ-based IVE
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\win\vscodium\bin\codium.cmd&#34;</span>       <span class="p">&amp;</span> :: VSCodium-based IVE
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\win\vscodium\bin\codeive.cmd&#34;</span>      <span class="p">&amp;</span> :: VSCodium-based IVE
 </span></span><span class="line"><span class="cl"><span class="k">start</span> /B <span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\win\fmide\fmide.exe&#34;</span>      <span class="p">&amp;</span> :: FMIDE+HAMR (see above for installation)
 </span></span></code></pre></div>
     </div>
@@ -1297,7 +1290,7 @@ Sireum&rsquo;s Vagrantfile:</p>
         <div data-tab-item="Windows (arm64)" data-tab-group="using-sireum" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\sireum.bat<span class="s2">&#34;                         &amp; :: CLI</span>
 </span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\idea\bin\IVE.exe<span class="s2">&#34;               &amp; :: IntelliJ-based IVE</span>
-</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\vscodium\bin\codium.cmd<span class="s2">&#34;        &amp; :: VSCodium-based IVE</span>
+</span></span><span class="line"><span class="cl"><span class="nv">%SIREUM_HOME%</span>\bin\win\vscodium\bin\codeive.cmd<span class="s2">&#34;       &amp; :: VSCodium-based IVE</span>
 </span></span></code></pre></div>
     </div>
     
