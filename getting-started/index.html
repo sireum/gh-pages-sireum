@@ -45,7 +45,7 @@
 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the latest packaged binary release, (or using the installer scripts for older releases). The package binary release includes a Sireum native executable that voids JVM boot-up time.">
-  <meta itemprop="wordCount" content="1761">
+  <meta itemprop="wordCount" content="1543">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -610,7 +610,7 @@
   <ul>
     <li><a href="#download">Download</a>
       <ul>
-        <li><a href="#github">Packaged Binaries</a>
+        <li><a href="#binaries">Packaged Binaries</a>
           <ul>
             <li><a href="#latest-release-bin">Latest Release</a>
               <ul>
@@ -624,6 +624,7 @@
                 <li><a href="#both-vscodium-based-and-intellij-based-ives-1">Both VSCodium-based and IntelliJ-based IVEs</a></li>
               </ul>
             </li>
+            <li><a href="#bin-notes">Notes</a></li>
           </ul>
         </li>
         <li><a href="#installer">Using Installer Scripts</a>
@@ -658,7 +659,7 @@
             
 
             <div class="post-content">
-                <p>Sireum can be retrieved using <a href="#installer">installers</a>, <a href="#github">packaged binaries</a>,
+                <p>Sireum can be retrieved using <a href="#installer">installers</a>, <a href="#binaries">packaged binaries</a>,
 or from <a href="#source">source</a>.
 The main advantage of using the source distribution is that updates
 can be done incrementally while the binary distribution requires complete
@@ -668,9 +669,9 @@ while users are recommended to use the <a href="#latest-release-bin">latest pack
 (or using the installer scripts for older releases).
 The package binary release includes a Sireum native executable that voids JVM boot-up time.</p>
 <h3 id="download">Download</h3>
-<h4 id="github">Packaged Binaries</h4>
+<h4 id="binaries">Packaged Binaries</h4>
 <h5 id="latest-release-bin">Latest Release</h5>
-<p><a href="https://github.com/sireum/kekinian/releases/tag/4.20241028.60464f2">https://github.com/sireum/kekinian/releases/tag/4.20241028.60464f2</a></p>
+<p><a href="https://github.com/sireum/kekinian/releases/tag/4.20241104.1c0dea6">https://github.com/sireum/kekinian/releases/tag/4.20241104.1c0dea6</a></p>
 <h6 id="vscodium-based-ive">VSCodium-based IVE</h6>
 
 
@@ -678,25 +679,11 @@ The package binary release includes a Sireum native executable that voids JVM bo
     <div class="tab-nav">
         
         <button
-                data-tab-item="macOS"
+                data-tab-item="macOS/Linux"
                 data-tab-group="binaries-release"
                 class="tab-nav-button btn active"
-        onclick="switchTab(true, 'binaries-release','macOS')"
-        >macOS</button>
-        
-        <button
-                data-tab-item="macOS (amd64)"
-                data-tab-group="binaries-release"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'binaries-release','macOS (amd64)')"
-        >macOS (amd64)</button>
-        
-        <button
-                data-tab-item="Linux"
-                data-tab-group="binaries-release"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'binaries-release','Linux')"
-        >Linux</button>
+        onclick="switchTab(true, 'binaries-release','macOS\/Linux')"
+        >macOS/Linux</button>
         
         <button
                 data-tab-item="Windows"
@@ -708,52 +695,13 @@ The package binary release includes a Sireum native executable that voids JVM bo
     </div>
     <div class="tab-content">
         
-        <div data-tab-item="macOS" data-tab-group="binaries-release" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241028.60464f2
-</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-codeive-mac-arm64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-codeive-mac-arm64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-codeive-mac-arm64.tar.xz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="macOS (amd64)" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241028.60464f2
-</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-codeive-mac-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-codeive-mac-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-codeive-mac-amd64.tar.xz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="Linux" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241028.60464f2
-</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-codeive-linux-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-codeive-linux-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-codeive-linux-amd64.tar.xz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">unzip -qq ~/Downloads/org.sireum.library.m2.zip
+        <div data-tab-item="macOS/Linux" data-tab-group="binaries-release" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">DISTRO</span><span class="o">=</span>codeive sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://github.com/sireum/kekinian/releases/download/4.20241104.1c0dea6/install.cmd<span class="k">)</span><span class="s2">&#34;</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">SIREUM_V</span><span class="p">=</span>4.20241028.60464f2
-</span></span><span class="line"><span class="cl"><span class="k">md</span> <span class="nv">%USERPROFILE%</span>\Applications <span class="nv">%USERPROFILE%</span>\Downloads <span class="mi">2</span><span class="p">&gt;</span> nul
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\sireum-codeive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/sireum-codeive-win-amd64.zip
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\7zz-24.08-cosmo-3.9.4.com https://github.com/sireum/rolling/releases/download/misc/7zz-24.08-cosmo-3.9.4.com 
-</span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>\Applications
-</span></span><span class="line"><span class="cl"><span class="nv">%USERPROFILE%</span>\Downloads\7zz-24.08-cosmo-3.9.4.com x <span class="nv">%USERPROFILE%</span>\Downloads\sireum-codeive-win-amd64.7z
-</span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>
-</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V/C <span class="s2">&#34;set DISTRO=codeive&amp;&amp; curl -JLOs https://github.com/sireum/kekinian/releases/download/4.20241104.1c0dea6/install.cmd &amp;&amp; install.cmd &amp;&amp; del /q/f install.cmd&#34;</span>
 </span></span></code></pre></div>
     </div>
     
@@ -766,25 +714,11 @@ The package binary release includes a Sireum native executable that voids JVM bo
     <div class="tab-nav">
         
         <button
-                data-tab-item="macOS"
+                data-tab-item="macOS/Linux"
                 data-tab-group="binaries-release"
                 class="tab-nav-button btn active"
-        onclick="switchTab(true, 'binaries-release','macOS')"
-        >macOS</button>
-        
-        <button
-                data-tab-item="macOS (amd64)"
-                data-tab-group="binaries-release"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'binaries-release','macOS (amd64)')"
-        >macOS (amd64)</button>
-        
-        <button
-                data-tab-item="Linux"
-                data-tab-group="binaries-release"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'binaries-release','Linux')"
-        >Linux</button>
+        onclick="switchTab(true, 'binaries-release','macOS\/Linux')"
+        >macOS/Linux</button>
         
         <button
                 data-tab-item="Windows"
@@ -796,52 +730,13 @@ The package binary release includes a Sireum native executable that voids JVM bo
     </div>
     <div class="tab-content">
         
-        <div data-tab-item="macOS" data-tab-group="binaries-release" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241028.60464f2
-</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-mac-arm64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-mac-arm64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-mac-arm64.tar.xz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="macOS (amd64)" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241028.60464f2
-</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-mac-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-mac-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-mac-amd64.tar.xz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="Linux" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241028.60464f2
-</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-linux-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-linux-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-linux-amd64.tar.xz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">unzip -qq ~/Downloads/org.sireum.library.m2.zip
+        <div data-tab-item="macOS/Linux" data-tab-group="binaries-release" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">DISTRO</span><span class="o">=</span>ive sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://github.com/sireum/kekinian/releases/download/4.20241104.1c0dea6/install.cmd<span class="k">)</span><span class="s2">&#34;</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">SIREUM_V</span><span class="p">=</span>4.20241028.60464f2
-</span></span><span class="line"><span class="cl"><span class="k">md</span> <span class="nv">%USERPROFILE%</span>\Applications <span class="nv">%USERPROFILE%</span>\Downloads <span class="mi">2</span><span class="p">&gt;</span> nul
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/sireum-ive-win-amd64.zip
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\7zz-24.08-cosmo-3.9.4.com https://github.com/sireum/rolling/releases/download/misc/7zz-24.08-cosmo-3.9.4.com 
-</span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>\Applications
-</span></span><span class="line"><span class="cl"><span class="nv">%USERPROFILE%</span>\Downloads\7zz-24.08-cosmo-3.9.4.com x <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.7z
-</span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>
-</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V/C <span class="s2">&#34;set DISTRO=ive&amp;&amp; curl -JLOs https://github.com/sireum/kekinian/releases/download/4.20241104.1c0dea6/install.cmd &amp;&amp; install.cmd &amp;&amp; del /q/f install.cmd&#34;</span>
 </span></span></code></pre></div>
     </div>
     
@@ -856,25 +751,11 @@ The package binary release includes a Sireum native executable that voids JVM bo
     <div class="tab-nav">
         
         <button
-                data-tab-item="macOS"
+                data-tab-item="macOS/Linux"
                 data-tab-group="binaries-release"
                 class="tab-nav-button btn active"
-        onclick="switchTab(true, 'binaries-release','macOS')"
-        >macOS</button>
-        
-        <button
-                data-tab-item="macOS (amd64)"
-                data-tab-group="binaries-release"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'binaries-release','macOS (amd64)')"
-        >macOS (amd64)</button>
-        
-        <button
-                data-tab-item="Linux"
-                data-tab-group="binaries-release"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'binaries-release','Linux')"
-        >Linux</button>
+        onclick="switchTab(true, 'binaries-release','macOS\/Linux')"
+        >macOS/Linux</button>
         
         <button
                 data-tab-item="Windows"
@@ -886,52 +767,13 @@ The package binary release includes a Sireum native executable that voids JVM bo
     </div>
     <div class="tab-content">
         
-        <div data-tab-item="macOS" data-tab-group="binaries-release" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>dev
-</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-codeive-mac-arm64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-codeive-mac-arm64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-codeive-mac-arm64.tar.xz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="macOS (amd64)" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>dev
-</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-codeive-mac-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-codeive-mac-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-codeive-mac-amd64.tar.xz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="Linux" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>dev
-</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-codeive-linux-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-codeive-linux-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-codeive-linux-amd64.tar.xz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">unzip -qq ~/Downloads/org.sireum.library.m2.zip
+        <div data-tab-item="macOS/Linux" data-tab-group="binaries-release" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">DISTRO</span><span class="o">=</span>codeive sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://github.com/sireum/kekinian/releases/download/dev/install.cmd<span class="k">)</span><span class="s2">&#34;</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">SIREUM_V</span><span class="p">=</span>dev
-</span></span><span class="line"><span class="cl"><span class="k">md</span> <span class="nv">%USERPROFILE%</span>\Applications <span class="nv">%USERPROFILE%</span>\Downloads <span class="mi">2</span><span class="p">&gt;</span> nul
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\sireum-codeive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/sireum-codeive-win-amd64.zip
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\7zz-24.08-cosmo-3.9.4.com https://github.com/sireum/rolling/releases/download/misc/7zz-24.08-cosmo-3.9.4.com 
-</span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>\Applications
-</span></span><span class="line"><span class="cl"><span class="nv">%USERPROFILE%</span>\Downloads\7zz-24.08-cosmo-3.9.4.com x <span class="nv">%USERPROFILE%</span>\Downloads\sireum-codeive-win-amd64.7z
-</span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>
-</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V/C <span class="s2">&#34;set DISTRO=codeive&amp;&amp; curl -JLOs https://github.com/sireum/kekinian/releases/download/dev/install.cmd &amp;&amp; install.cmd &amp;&amp; del /q/f install.cmd&#34;</span>
 </span></span></code></pre></div>
     </div>
     
@@ -944,25 +786,11 @@ The package binary release includes a Sireum native executable that voids JVM bo
     <div class="tab-nav">
         
         <button
-                data-tab-item="macOS"
+                data-tab-item="macOS/Linux"
                 data-tab-group="binaries-release"
                 class="tab-nav-button btn active"
-        onclick="switchTab(true, 'binaries-release','macOS')"
-        >macOS</button>
-        
-        <button
-                data-tab-item="macOS (amd64)"
-                data-tab-group="binaries-release"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'binaries-release','macOS (amd64)')"
-        >macOS (amd64)</button>
-        
-        <button
-                data-tab-item="Linux"
-                data-tab-group="binaries-release"
-                class="tab-nav-button btn "
-        onclick="switchTab(true, 'binaries-release','Linux')"
-        >Linux</button>
+        onclick="switchTab(true, 'binaries-release','macOS\/Linux')"
+        >macOS/Linux</button>
         
         <button
                 data-tab-item="Windows"
@@ -974,52 +802,13 @@ The package binary release includes a Sireum native executable that voids JVM bo
     </div>
     <div class="tab-content">
         
-        <div data-tab-item="macOS" data-tab-group="binaries-release" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>dev
-</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-mac-arm64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-mac-arm64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-mac-arm64.tar.xz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="macOS (amd64)" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>dev
-</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-mac-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-mac-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-mac-amd64.tar.xz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/org.sireum.library.m2.zip
-</span></span></code></pre></div>
-    </div>
-    
-        <div data-tab-item="Linux" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>dev
-</span></span><span class="line"><span class="cl">mkdir -p ~/Applications ~/Downloads
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/sireum-ive-linux-amd64.tar.xz https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/sireum-ive-linux-amd64.tar.xz
-</span></span><span class="line"><span class="cl">curl -JLso ~/Downloads/org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">$SIREUM_V</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~/Applications
-</span></span><span class="line"><span class="cl">tar xf ~/Downloads/sireum-ive-linux-amd64.tar.xz
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
-</span></span><span class="line"><span class="cl">unzip -qq ~/Downloads/org.sireum.library.m2.zip
+        <div data-tab-item="macOS/Linux" data-tab-group="binaries-release" class="tab-item active">
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">DISTRO</span><span class="o">=</span>ive sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://github.com/sireum/kekinian/releases/download/dev/install.cmd<span class="k">)</span><span class="s2">&#34;</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">SIREUM_V</span><span class="p">=</span>dev
-</span></span><span class="line"><span class="cl"><span class="k">md</span> <span class="nv">%USERPROFILE%</span>\Applications <span class="nv">%USERPROFILE%</span>\Downloads <span class="mi">2</span><span class="p">&gt;</span> nul
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/sireum-ive-win-amd64.zip
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip https://github.com/sireum/kekinian/releases/download/<span class="nv">%SIREUM_V%</span>/org.sireum.library.m2.zip  
-</span></span><span class="line"><span class="cl">curl -JLso <span class="nv">%USERPROFILE%</span>\Downloads\7zz-24.08-cosmo-3.9.4.com https://github.com/sireum/rolling/releases/download/misc/7zz-24.08-cosmo-3.9.4.com 
-</span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>\Applications
-</span></span><span class="line"><span class="cl"><span class="nv">%USERPROFILE%</span>\Downloads\7zz-24.08-cosmo-3.9.4.com x <span class="nv">%USERPROFILE%</span>\Downloads\sireum-ive-win-amd64.7z
-</span></span><span class="line"><span class="cl"><span class="k">cd</span> /d <span class="nv">%USERPROFILE%</span>
-</span></span><span class="line"><span class="cl">tar xf <span class="nv">%USERPROFILE%</span>\Downloads\org.sireum.library.m2.zip
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V/C <span class="s2">&#34;set DISTRO=ive&amp;&amp; curl -JLOs https://github.com/sireum/kekinian/releases/download/dev/install.cmd &amp;&amp; install.cmd &amp;&amp; del /q/f install.cmd&#34;</span>
 </span></span></code></pre></div>
     </div>
     
@@ -1029,11 +818,23 @@ The package binary release includes a Sireum native executable that voids JVM bo
 while the <code>sireum-codeive</code> only includes the latter.
 The <code>sireum-cli</code> files are compressed native executables built for specific platforms.
 Both <code>sireum-ive</code> and <code>sireum-codeive</code> include the <code>sireum-cli</code> native executable.</p>
+<h5 id="bin-notes">Notes</h5>
 <ul>
 <li>
-<p>On macOS, you might need to &ldquo;un-quarantine&rdquo; the downloaded files
-before using them:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">xattr -rd com.apple.quarantine <span class="s2">&#34;&lt;PATH-TO&gt;&#34;</span>/sireum-*
+<p>On Linux that enables <a href="https://docs.kernel.org/admin-guide/binfmt-misc.html"><code>binfmt_misc</code></a> to automatically
+launch Windows executables using WINE (e.g., Ubuntu desktops), Sireum performs better if <code>binfmt_misc</code> is configured
+to enable the <a href="https://justine.lol/ape.html">αcτµαlly pδrταblε εxεcµταblε (APE)</a> Loader:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo wget -O /usr/bin/ape https://cosmo.zip/pub/cosmos/bin/ape-<span class="k">$(</span>uname -m<span class="k">)</span>.elf
+</span></span><span class="line"><span class="cl">sudo chmod +x /usr/bin/ape
+</span></span><span class="line"><span class="cl">sudo sh -c <span class="s2">&#34;echo &#39;:APE:M::MZqFpD::/usr/bin/ape:&#39; &gt;/proc/sys/fs/binfmt_misc/register&#34;</span>
+</span></span><span class="line"><span class="cl">sudo sh -c <span class="s2">&#34;echo &#39;:APE-jart:M::jartsr::/usr/bin/ape:&#39; &gt;/proc/sys/fs/binfmt_misc/register&#34;</span>
+</span></span></code></pre></div><p>or, by disabling <code>binfmt_misc</code> completely:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo sh -c <span class="s1">&#39;echo -1 &gt; /proc/sys/fs/binfmt_misc/cli&#39;</span>
+</span></span><span class="line"><span class="cl">sudo sh -c <span class="s1">&#39;echo -1 &gt; /proc/sys/fs/binfmt_misc/status&#39;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>On Windows WSL, you need to disable <code>binfmt_misc</code> interop:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo sh -c <span class="s2">&#34;echo -1 &gt;/proc/sys/fs/binfmt_misc/WSLInterop&#34;</span>
 </span></span></code></pre></div></li>
 </ul>
 <p>Set the <code>SIREUM_HOME</code> env var to the Sireum installation path, then proceed to <a href="#using-sireum">Using Sireum</a>.</p>
@@ -1066,12 +867,12 @@ listed at <a href="https://github.com/sireum/kekinian/releases">https://github.c
     <div class="tab-content">
         
         <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241028.60464f2 <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20241104.1c0dea6 <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20241028.60464f2&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20241104.1c0dea6&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
 </span></span></code></pre></div>
     </div>
     
@@ -1159,7 +960,8 @@ you can delete the offending file(s) in the <code>sireum</code> folder of your u
 (or, entirely delete the <code>Downloads</code> <code>sireum</code> folder).</p>
 <p>Also note that this installation approach is using GitHub anonymous connection, thus subject to rate limiting.
 To avoid the limit, set the <code>GITHUB_TOKEN</code> environment variable to one of your GitHub tokens.</p>
-<p>If the installation keeps failing, please use the packaged binaries described below.</p>
+<p>If the installation keeps failing, please use the <a href="#binaries">packaged binaries</a> described above.</p>
+<p>Moreover, please take a look at the <a href="#bin-notes">packaged binaries notes section</a>.</p>
 <h4 id="source">Git Source Distribution</h4>
 <h5 id="requirements">Requirements</h5>
 <ul>
@@ -1291,6 +1093,8 @@ where <code>git status</code> indicates that its working tree is clean) and <cod
 <p>If all else fails, try recursively re-clone Sireum.</p>
 </li>
 </ul>
+<p>If the installation keeps failing, please use the <a href="#binaries">packaged binaries</a> described above.</p>
+<p>Moreover, please take a look at the <a href="#bin-notes">packaged binaries notes section</a>.</p>
 <h5 id="vagrant-linux-virtual-machine-vm">Vagrant Linux Virtual Machine (VM)</h5>
 <p>A Linux VM containing a Sireum source build can be provisioned using <a href="https://www.vagrantup.com/">Vagrant</a> and
 Sireum&rsquo;s Vagrantfile:</p>
@@ -1511,20 +1315,22 @@ Sireum&rsquo;s Vagrantfile:</p>
         <div data-tab-item="macOS/Linux" data-tab-group="example" class="tab-item active">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone https://github.com/sireum/logika-examples
 </span></span><span class="line"><span class="cl">logika-examples/bin/verify.cmd
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span> proyek ive logika-examples
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span> proyek ive logika-examples         <span class="c1"># For IntelliJ-based IVE</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="si">${</span><span class="nv">SIREUM_HOME</span><span class="si">}</span><span class="s2">/bin/sireum&#34;</span> proyek <span class="nb">export</span> logika-examples      <span class="c1"># For VSCodium-based IVE</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="example" class="tab-item ">
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">git clone https://github.com/sireum/logika-examples
 </span></span><span class="line"><span class="cl">logika-examples\bin\verify.cmd
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum.bat&#34;</span> proyek ive logika-examples
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum.bat&#34;</span> proyek ive logika-examples      <span class="p">&amp;</span> :: For IntelliJ-based IVE
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span><span class="nv">%SIREUM_HOME%</span><span class="s2">\bin\sireum.bat&#34;</span> proyek export logika-examples   <span class="p">&amp;</span> :: For VSCodium-based IVE
 </span></span></code></pre></div>
     </div>
     
 </div>
 </div>
-<p>Then, open the <code>logika-examples</code> directory in IVE and see
+<p>Then, open the <code>logika-examples</code> directory in IVE/CodeIVE and see
 Logika in action on some of the <code>.sc</code> example files.</p>
 <p>See <a href="https://doc.sireum.org">Sireum Documentation</a> for more information.</p>
 <h4 id="native-executable">Native Executable</h4>
