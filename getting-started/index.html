@@ -45,7 +45,7 @@
 
   <meta itemprop="name" content="Getting Started">
   <meta itemprop="description" content="Sireum can be retrieved using installers, packaged binaries, or from source. The main advantage of using the source distribution is that updates can be done incrementally while the binary distribution requires complete re-installation. On the other hand, source distribution requires more setup. The source distribution should be used by Sireum developers and code contributors, while users are recommended to use the latest packaged binary release, (or using the installer scripts for older releases). The package binary release includes a Sireum native executable that voids JVM boot-up time.">
-  <meta itemprop="wordCount" content="1583">
+  <meta itemprop="wordCount" content="1578">
   <meta itemprop="image" content="https://sireum.org/">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -640,7 +640,6 @@
             <li><a href="#requirements">Requirements</a></li>
             <li><a href="#setup">Setup</a></li>
             <li><a href="#notes">Notes</a></li>
-            <li><a href="#vagrant-linux-virtual-machine-vm">Vagrant Linux Virtual Machine (VM)</a></li>
           </ul>
         </li>
         <li><a href="#hamr">Installing FMIDE+HAMR</a></li>
@@ -649,6 +648,7 @@
     </li>
     <li><a href="#using-sireum">Using Sireum</a>
       <ul>
+        <li><a href="#using-notes">Notes</a></li>
         <li><a href="#native-executable">Native Executable</a></li>
       </ul>
     </li>
@@ -671,7 +671,7 @@ The package binary release includes a Sireum native executable that voids JVM bo
 <h3 id="download">Download</h3>
 <h4 id="binaries">Packaged Binaries</h4>
 <h5 id="latest-release-bin">Latest Release</h5>
-<p><a href="https://github.com/sireum/kekinian/releases/tag/4.20250115.20107b2">https://github.com/sireum/kekinian/releases/tag/4.20250115.20107b2</a></p>
+<p><a href="https://github.com/sireum/kekinian/releases/tag/4.20250124.83153a7">https://github.com/sireum/kekinian/releases/tag/4.20250124.83153a7</a></p>
 <h6 id="latest-release-bin-ives">Both VSCodium-based and IntelliJ-based IVEs</h6>
 
 
@@ -696,12 +696,12 @@ The package binary release includes a Sireum native executable that voids JVM bo
     <div class="tab-content">
         
         <div data-tab-item="macOS/Linux" data-tab-group="binaries-release" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">DISTRO</span><span class="o">=</span>ive <span class="nv">DIR</span><span class="o">=</span><span class="nv">$HOME</span>/Applications/Sireum sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://github.com/sireum/kekinian/releases/download/4.20250115.20107b2/install.cmd<span class="k">)</span><span class="s2">&#34;</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">DISTRO</span><span class="o">=</span>ive <span class="nv">DIR</span><span class="o">=</span><span class="nv">$HOME</span>/Applications/Sireum sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://github.com/sireum/kekinian/releases/download/4.20250124.83153a7/install.cmd<span class="k">)</span><span class="s2">&#34;</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V/C <span class="s2">&#34;set DISTRO=ive&amp;&amp; set DIR=</span><span class="nv">%USERPROFILE%</span><span class="s2">\Applications\Sireum&amp;&amp; curl -JLOs https://github.com/sireum/kekinian/releases/download/4.20250115.20107b2/install.cmd &amp;&amp; install.cmd &amp;&amp; del /q/f install.cmd&#34;</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V/C <span class="s2">&#34;set DISTRO=ive&amp;&amp; set DIR=</span><span class="nv">%USERPROFILE%</span><span class="s2">\Applications\Sireum&amp;&amp; curl -JLOs https://github.com/sireum/kekinian/releases/download/4.20250124.83153a7/install.cmd &amp;&amp; install.cmd &amp;&amp; del /q/f install.cmd&#34;</span>
 </span></span></code></pre></div>
     </div>
     
@@ -731,12 +731,12 @@ The package binary release includes a Sireum native executable that voids JVM bo
     <div class="tab-content">
         
         <div data-tab-item="macOS/Linux" data-tab-group="binaries-release" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">DISTRO</span><span class="o">=</span>codeive <span class="nv">DIR</span><span class="o">=</span><span class="nv">$HOME</span>/Applications/Sireum sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://github.com/sireum/kekinian/releases/download/4.20250115.20107b2/install.cmd<span class="k">)</span><span class="s2">&#34;</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">DISTRO</span><span class="o">=</span>codeive <span class="nv">DIR</span><span class="o">=</span><span class="nv">$HOME</span>/Applications/Sireum sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://github.com/sireum/kekinian/releases/download/4.20250124.83153a7/install.cmd<span class="k">)</span><span class="s2">&#34;</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="binaries-release" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V/C <span class="s2">&#34;set DISTRO=codeive&amp;&amp; set DIR=</span><span class="nv">%USERPROFILE%</span><span class="s2">\Applications\Sireum&amp;&amp; curl -JLOs https://github.com/sireum/kekinian/releases/download/4.20250115.20107b2/install.cmd &amp;&amp; install.cmd &amp;&amp; del /q/f install.cmd&#34;</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V/C <span class="s2">&#34;set DISTRO=codeive&amp;&amp; set DIR=</span><span class="nv">%USERPROFILE%</span><span class="s2">\Applications\Sireum&amp;&amp; curl -JLOs https://github.com/sireum/kekinian/releases/download/4.20250124.83153a7/install.cmd &amp;&amp; install.cmd &amp;&amp; del /q/f install.cmd&#34;</span>
 </span></span></code></pre></div>
     </div>
     
@@ -853,39 +853,12 @@ Both <code>sireum-ive</code> and <code>sireum-codeive</code> include the <code>s
     
 </div>
 </div>
+<p>If the above command somehow fails, you can download the <strong>sireum-codeive</strong> prefixed file for your
+specific platform directly at:</p>
+<p><a href="https://github.com/sireum/kekinian/releases/tag/4.20250115.20107b2">https://github.com/sireum/kekinian/releases/tag/4.20250115.20107b2</a></p>
+<p>You can uncompress 7z archive files in Windows by using <a href="https://7-zip.org">7-zip</a>.</p>
 <h5 id="bin-notes">Notes</h5>
-<ul>
-<li>
-<p>You can customize the <code>DIR</code> environment variable in the commands above to specify a different Sireum installation location</p>
-</li>
-<li>
-<p>If you encounter the following message when running Sireum:</p>
-<pre tabindex="0"><code>The current machine does not support all of the following CPU features that are required by the image: [CX8, CMOV, FXSR, MMX, SSE, SSE2, SSE3, SSSE3, SSE4_1, SSE4_2, POPCNT, LZCNT, AVX, AVX2, BMI1, BMI2, FMA, F16C].
-</code></pre><p>Delete the following file under the Sireum installation location:</p>
-<ul>
-<li><strong>macOS</strong>: <code>bin/mac/sireum</code></li>
-<li><strong>Linux (amd64)</strong>: <code>bin/linux/sireum</code></li>
-<li><strong>Linux (ard64)</strong>: <code>bin/linux/arm/sireum</code></li>
-<li><strong>Windows</strong>: <code>bin\win\sireum.exe</code></li>
-</ul>
-</li>
-<li>
-<p>On Linux that enables <a href="https://docs.kernel.org/admin-guide/binfmt-misc.html"><code>binfmt_misc</code></a> to automatically
-launch Windows executables using WINE (e.g., Ubuntu desktops), Sireum performs better if <code>binfmt_misc</code> is configured
-to enable the <a href="https://justine.lol/ape.html">αcτµαlly pδrταblε εxεcµταblε (APE)</a> Loader:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo wget -O /usr/bin/ape https://cosmo.zip/pub/cosmos/bin/ape-<span class="k">$(</span>uname -m<span class="k">)</span>.elf
-</span></span><span class="line"><span class="cl">sudo chmod +x /usr/bin/ape
-</span></span><span class="line"><span class="cl">sudo sh -c <span class="s2">&#34;echo &#39;:APE:M::MZqFpD::/usr/bin/ape:&#39; &gt;/proc/sys/fs/binfmt_misc/register&#34;</span>
-</span></span><span class="line"><span class="cl">sudo sh -c <span class="s2">&#34;echo &#39;:APE-jart:M::jartsr::/usr/bin/ape:&#39; &gt;/proc/sys/fs/binfmt_misc/register&#34;</span>
-</span></span></code></pre></div><p>or, by disabling <code>binfmt_misc</code> completely:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo sh -c <span class="s1">&#39;echo -1 &gt; /proc/sys/fs/binfmt_misc/cli&#39;</span>
-</span></span><span class="line"><span class="cl">sudo sh -c <span class="s1">&#39;echo -1 &gt; /proc/sys/fs/binfmt_misc/status&#39;</span>
-</span></span></code></pre></div></li>
-<li>
-<p>On Windows WSL, you need to disable <code>binfmt_misc</code> interop:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo sh -c <span class="s2">&#34;echo -1 &gt;/proc/sys/fs/binfmt_misc/WSLInterop&#34;</span>
-</span></span></code></pre></div></li>
-</ul>
+<p>You can customize the <code>DIR</code> environment variable in the commands above to specify a different Sireum installation location.</p>
 <p>Set the <code>SIREUM_HOME</code> env var to the Sireum installation path, then proceed to <a href="#using-sireum">Using Sireum</a>.</p>
 <h4 id="installer">Using Installer Scripts</h4>
 <p>You can set up Sireum by downloading and running its initialization script as follows
@@ -916,12 +889,12 @@ listed at <a href="https://github.com/sireum/kekinian/releases">https://github.c
     <div class="tab-content">
         
         <div data-tab-item="macOS/Linux" data-tab-group="installer-script" class="tab-item active">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20250115.20107b2 <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">(</span><span class="nv">DIR</span><span class="o">=</span>Sireum <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">SIREUM_V</span><span class="o">=</span>4.20250124.83153a7 <span class="o">&amp;&amp;</span> rm -fR <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> mkdir -p <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>/bin <span class="o">&amp;&amp;</span> curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/<span class="nv">$SIREUM_V</span>/bin/init.sh <span class="o">&amp;&amp;</span> bash init.sh<span class="o">)</span>
 </span></span></code></pre></div>
     </div>
     
         <div data-tab-item="Windows" data-tab-group="installer-script" class="tab-item ">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20250115.20107b2&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
+        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">cmd /V /C <span class="s2">&#34;set DIR=Sireum&amp;&amp; set SIREUM_V=4.20250124.83153a7&amp;&amp; (if exist !DIR! rd /S /Q !DIR!) &amp;&amp; md !DIR!\bin &amp;&amp; cd !DIR!\bin &amp;&amp; curl -JLso init.bat https://raw.githubusercontent.com/sireum/kekinian/!SIREUM_V!/bin/init.bat &amp;&amp; init.bat&#34;</span>
 </span></span></code></pre></div>
     </div>
     
@@ -1107,12 +1080,6 @@ where <code>git status</code> indicates that its working tree is clean) and <cod
 </ul>
 <p>If the installation keeps failing, please use the <a href="#binaries">packaged binaries</a> described above.</p>
 <p>Moreover, please take a look at the <a href="#bin-notes">packaged binaries notes section</a>.</p>
-<h5 id="vagrant-linux-virtual-machine-vm">Vagrant Linux Virtual Machine (VM)</h5>
-<p>A Linux VM containing a Sireum source build can be provisioned using <a href="https://www.vagrantup.com/">Vagrant</a> and
-Sireum&rsquo;s Vagrantfile:</p>
-<p><a href="https://github.com/sireum/resources/tree/master/vagrant">https://github.com/sireum/resources/tree/master/vagrant</a></p>
-<p>You can download the contents of the directory by using the following link:
-<a href="https://downgit.github.io/#/home?url=https://github.com/sireum/resources/tree/master/vagrant">https://downgit.github.io/#/home?url=https://github.com/sireum/resources/tree/master/vagrant</a></p>
 <h4 id="hamr">Installing FMIDE+HAMR</h4>
 
 
@@ -1345,6 +1312,36 @@ Sireum&rsquo;s Vagrantfile:</p>
 <p>Then, open the <code>logika-examples</code> directory in IVE/CodeIVE and see
 Logika in action on some of the <code>.sc</code> example files.</p>
 <p>See <a href="https://doc.sireum.org">Sireum Documentation</a> for more information.</p>
+<h4 id="using-notes">Notes</h4>
+<ul>
+<li>
+<p>On Linux that enables <a href="https://docs.kernel.org/admin-guide/binfmt-misc.html"><code>binfmt_misc</code></a> to automatically
+launch Windows executables using WINE (e.g., Ubuntu desktops), Sireum requires that <code>binfmt_misc</code> is configured
+to enable the <a href="https://justine.lol/ape.html">αcτµαlly pδrταblε εxεcµταblε (APE)</a> Loader:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo wget -O /usr/bin/ape https://cosmo.zip/pub/cosmos/bin/ape-<span class="k">$(</span>uname -m<span class="k">)</span>.elf
+</span></span><span class="line"><span class="cl">sudo chmod +x /usr/bin/ape
+</span></span><span class="line"><span class="cl">sudo sh -c <span class="s2">&#34;echo &#39;:APE:M::MZqFpD::/usr/bin/ape:&#39; &gt;/proc/sys/fs/binfmt_misc/register&#34;</span>
+</span></span><span class="line"><span class="cl">sudo sh -c <span class="s2">&#34;echo &#39;:APE-jart:M::jartsr::/usr/bin/ape:&#39; &gt;/proc/sys/fs/binfmt_misc/register&#34;</span>
+</span></span></code></pre></div><p>or, by disabling <code>binfmt_misc</code> completely:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo sh -c <span class="s1">&#39;echo -1 &gt; /proc/sys/fs/binfmt_misc/cli&#39;</span>
+</span></span><span class="line"><span class="cl">sudo sh -c <span class="s1">&#39;echo -1 &gt; /proc/sys/fs/binfmt_misc/status&#39;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>On Windows WSL, you need to disable <code>binfmt_misc</code> interop:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo sh -c <span class="s2">&#34;echo -1 &gt;/proc/sys/fs/binfmt_misc/WSLInterop&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>If you encounter the following message when running Sireum:</p>
+<pre tabindex="0"><code>The current machine does not support all of the following CPU features that are required by the image: [CX8, CMOV, FXSR, MMX, SSE, SSE2, SSE3, SSSE3, SSE4_1, SSE4_2, POPCNT, LZCNT, AVX, AVX2, BMI1, BMI2, FMA, F16C].
+</code></pre><p>Delete the following file under the Sireum installation location:</p>
+<ul>
+<li><strong>macOS</strong>: <code>bin/mac/sireum</code></li>
+<li><strong>Linux (amd64)</strong>: <code>bin/linux/sireum</code></li>
+<li><strong>Linux (ard64)</strong>: <code>bin/linux/arm/sireum</code></li>
+<li><strong>Windows</strong>: <code>bin\win\sireum.exe</code></li>
+</ul>
+</li>
+</ul>
 <h4 id="native-executable">Native Executable</h4>
 <p>It is recommended to compile Sireum (and Slash build scripts) to native in certain situations in order to avoid JVM boot up time.
 The packaged binary releases include natively compiled Sireum.
