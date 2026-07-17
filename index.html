@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta name="generator" content="Hugo 0.159.0">
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="A High Assurance System Engineering Platform" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://sireum.org/" />
+
+
+    <title>
+        
+            Sireum 
+        
+    </title>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.14/themes/default/style.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.14/themes/default-dark/style.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/_pagefind/pagefind-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css" integrity="sha512-mQwom8Ns4op+H29oDkD/LXO/OsXPvCFfkgZkFAVrhhePzRLU8NUI3Nkm43NhWUSmj3p5Cca2HTEkMQmXQRwDQQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+
+
+<link rel="stylesheet" href="/main.9b7fec326fab4b320f3a6ebff5b2cd1a56f40af9971ff15a0213c97eff1ce5d0.css" integrity="sha256-m3/sMm&#43;rSzIPOm6/9bLNGlb0CvmXH/FaAhPJfv8c5dA=">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="Sireum">
+  <meta itemprop="description" content="Slang: presentation, paper
+HAMR: presentation, paper
+Logika: presentation, paper, textbook
+Sireum aims to provide basic building blocks, frameworks, and tools to engineer high assurance systems by employing various formal method techniques for system validation and verification (V&amp;V) at different stages of system development cycle such as architectural designs and system implementations. Read more …
+BSD2 License Next-Gen — V 2017-2026, SAnToS Lab, Kansas State University, contact@santoslab.org">
+  <meta itemprop="wordCount" content="66">
+  <meta itemprop="image" content="https://sireum.org/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sireum.org/">
+  <meta name="twitter:title" content="Sireum">
+  <meta name="twitter:description" content="Slang: presentation, paper
+HAMR: presentation, paper
+Logika: presentation, paper, textbook
+Sireum aims to provide basic building blocks, frameworks, and tools to engineer high assurance systems by employing various formal method techniques for system validation and verification (V&amp;V) at different stages of system development cycle such as architectural designs and system implementations. Read more …
+BSD2 License Next-Gen — V 2017-2026, SAnToS Lab, Kansas State University, contact@santoslab.org">
+
+
+
+
+
+
+
+
+
+<link rel="alternate" type="application/rss+xml" href="https://sireum.org/index.xml" title="Sireum" />
+
+
+
+
+
+
+
+    </head>
+
+    
+    <body class="">
+
+    
+        <div class="container">
+            <header class="header">
+    <span class="menu-trigger">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+    </span>
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <img class="color-scheme" src="/img/santos/icon-sireum.png" alt="">
+            &nbsp;<span class="logo__text">Sireum</span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                
+
+<nav class="menu">
+  <ul class="menu__inner">
+  
+  
+    
+      <div>
+        <li>
+          <a href="/about/" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long">About</span>
+            <span class="responsive-title-short">About</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+  
+  
+    
+      <div class="submenu">
+        <li class="dropdown" onmouseover="menuDisplay(this.children[1], true);" onmouseout="menuDisplay(this.children[1], false);">
+          <a class="dropbtn" href="" style="pointer-events: none; cursor: default;">
+            <span class="responsive-title-long">Projects&nbsp;<small>ᐁ</small></span>
+            <span class="responsive-title-short">Projects&nbsp;<small>ᐁ</small></span>
+          </a>
+          <div class="dropdown-content" align="left">
+            <ul style="margin:8px;">
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://slang.sireum.org" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>Slang</b> — Programming Language</span>
+            <span class="responsive-title-short">Slang</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://logika.sireum.org" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>Logika</b> — Verification Framework</span>
+            <span class="responsive-title-short">Logika</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://hamr.sireum.org" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>HAMR</b> — SysMLv2 & AADL Model-based System Engineering Framework</span>
+            <span class="responsive-title-short">HAMR</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="/ive/" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>IVE</b> — Integrated Verification Environment</span>
+            <span class="responsive-title-short">IVE</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div class="submenu">
+        <li class="dropdown" onmouseover="menuDisplay(this.children[1], true);" onmouseout="menuDisplay(this.children[1], false);">
+          <a class="dropbtn" href="" style="pointer-events: none; cursor: default;">
+            <span class="responsive-title-long">Prototypes&nbsp;<small>ᐁ</small></span>
+            <span class="responsive-title-short">Prototypes&nbsp;<small>ᐁ</small></span>
+          </a>
+          <div class="dropdown-content" align="left">
+            <ul style="margin:8px;">
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://logika.sireum.org/infoflow" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>InfoFlow</b> —  Secure Conditional Information Flow Verifier</span>
+            <span class="responsive-title-short">InfoFlow</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="/hamr-sysmlv2/" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>HAMR SysML V2</b> Front-end</span>
+            <span class="responsive-title-short">HAMR SysML V2</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+            </ul>
+          </div>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div class="submenu">
+        <li class="dropdown" onmouseover="menuDisplay(this.children[1], true);" onmouseout="menuDisplay(this.children[1], false);">
+          <a class="dropbtn" href="https://slang.sireum.org/tools" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long">Auxiliary Tools&nbsp;<small>ᐁ</small></span>
+            <span class="responsive-title-short">Tools&nbsp;<small>ᐁ</small></span>
+          </a>
+          <div class="dropdown-content" align="left">
+            <ul style="margin:8px;">
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://slang.sireum.org/tools/embedded" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>Slang Embedded</b> to C Transpiler</span>
+            <span class="responsive-title-short">Embedded</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://slang.sireum.org/tools/proyek" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>Proyek</b> — Incremental/Parallel Build Tool</span>
+            <span class="responsive-title-short">Proyek</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://slang.sireum.org/tools/slangcheck" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>SlangCheck</b> — Randomized Test Generator Generator</span>
+            <span class="responsive-title-short">SlangCheck</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://slang.sireum.org/tools/pg" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>PG</b> — Parser Generator</span>
+            <span class="responsive-title-short">PG</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://slang.sireum.org/tools/cligen" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>CLIGen</b> — Command-line Interface Generator</span>
+            <span class="responsive-title-short">CLIGen</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://slang.sireum.org/tools/sergen" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>SerGen</b> — JSON & MessagePack De/Serializer Generator</span>
+            <span class="responsive-title-short">SerGen</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://slang.sireum.org/tools/trafo" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>Trafo</b> — Slang Visitor/Transformer Generator</span>
+            <span class="responsive-title-short">Trafo</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://slang.sireum.org/tools//bitcodec" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>BitCodec</b> — Bit-Precise Data Encoder/Decoder Generator</span>
+            <span class="responsive-title-short">BitCodec</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://slang.sireum.org/tools/presentasi" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>Presentasi</b> — JavaFX Presentation Generator</span>
+            <span class="responsive-title-short">Presentasi</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://slang.sireum.org/tools/slash" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b>Slash</b> — Slang Universal Shell Scripting</span>
+            <span class="responsive-title-short">Slash</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+            </ul>
+          </div>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div class="submenu">
+        <li class="dropdown" onmouseover="menuDisplay(this.children[1], true);" onmouseout="menuDisplay(this.children[1], false);">
+          <a class="dropbtn" href="" style="pointer-events: none; cursor: default;">
+            <span class="responsive-title-long">Older Generations&nbsp;<small>ᐁ</small></span>
+            <span class="responsive-title-short">Older Gen.&nbsp;<small>ᐁ</small></span>
+          </a>
+          <div class="dropdown-content" align="left">
+            <ul style="margin:8px;">
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://logika.v3.sireum.org" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b><i>3<sup>rd</sup></i> Gen. Logika</b> — Program Verifier</span>
+            <span class="responsive-title-short"><i>3<sup>rd</sup></i> Logika</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://awas.sireum.org" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b><i>3<sup>rd</sup></i> Gen. Awas</b> — AADL Information Flow Analyzer/Visualizer</span>
+            <span class="responsive-title-short"><i>3<sup>rd</sup></i> Awas</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+                
+  
+  
+    
+      <div>
+        <li>
+          <a href="http://pag.arguslab.org/argus-saf" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long"><b><i>2<sup>nd</sup></i> Gen. Amandroid</b> (now Argus-SAF) — Android Static Analysis Framework</span>
+            <span class="responsive-title-short"><i>2<sup>nd</sup></i> Amandroid</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+              
+            </ul>
+          </div>
+        </li>
+      </div>
+    
+  
+
+              
+            </ul>
+          </div>
+        </li>
+      </div>
+    
+  
+
+  
+  
+    
+      <div>
+        <li>
+          <a href="/getting-started/" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long">Download</span>
+            <span class="responsive-title-short">Download</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+  
+  
+    
+      <div>
+        <li>
+          <a href="https://doc.sireum.org" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long">Doc</span>
+            <span class="responsive-title-short">Doc</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+  
+  
+    
+      <div>
+        <li>
+          <a href="/papers/" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long">Papers</span>
+            <span class="responsive-title-short">Papers</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+  
+  
+    
+      <div>
+        <li>
+          <a href="/funding/" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long">Funding</span>
+            <span class="responsive-title-short">Funding</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+  
+  
+    
+      <div>
+        <li>
+          <a href="/team/" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">
+            <span class="responsive-title-long">Team</span>
+            <span class="responsive-title-short">Team</span>
+          </a>
+        </li>
+      </div>
+    
+  
+
+  </ul>
+</nav>
+
+            
+        </span>
+    </span>
+        <span class="theme-toggle not-selectable" style="margin-right: 10px"><img src="/img/toggle.png" height="20px"></span>
+      <div class="submenu">
+          <li class="dropdown" onmouseover="menuDisplay(this.children[1], true); searchFocus();" onmouseout="menuDisplay(this.children[1], false);">
+              <a class="dropbtn fa fa-search"></a>
+              <div class="dropdown-content" align="left">
+                  <div id="search" style="z-index:2147483647; position: fixed;"></div>
+              </div>
+          </li>
+      </div>
+    
+</header>
+
+
+            <div class="content">
+                
+    <main aria-role="main">
+        <div>
+            
+              <div class="cycle-slideshow post" data-cycle-slides="> a" data-cycle-pause-on-hover="true" data-cycle-log="false">
+                
+                  <a href="download/"><img class="color-scheme banner" src="/img/sireum-banner.png"></a>
+                
+                  <a href="https://logika.sireum.org"data-cycle-timeout="12000"><img class=" banner" src="/img/logika-demo.gif"></a>
+                
+                  <a href="https://hamr.sireum.org"><img class=" banner" src="/img/hamr-osate-arch.png"></a>
+                
+                  <a href="https://hamr.sireum.org"><img class=" banner" src="/img/hamr-osate-menu.png"></a>
+                
+                  <a href="https://hamr.sireum.org"><img class=" banner" src="/img/hamr-osate-dialog.png"></a>
+                
+                  <a href="https://hamr.sireum.org"><img class=" banner" src="/img/hamr-ive-slang-code.png"></a>
+                
+                  <a href="https://hamr.sireum.org"><img class=" banner" src="/img/hamr-ive-demo.png"></a>
+                
+                  <a href="https://hamr.sireum.org"><img class=" banner" src="/img/hamr-ive-ba-viz.png"></a>
+                
+                  <a href="https://hamr.sireum.org"><img class=" banner" src="/img/hamr-ive-filter.png"></a>
+                
+                  <a href="https://hamr.sireum.org"><img class=" banner" src="/img/hamr-ive-msc.png"></a>
+                
+                  <a href="https://hamr.sireum.org"><img class=" banner" src="/img/hamr-clion.png"></a>
+                
+                  <a href="https://hamr.sireum.org"><img class=" banner" src="/img/hamr-linux-demo.png"></a>
+                
+                  <a href="https://hamr.sireum.org"><img class=" banner" src="/img/hamr-qemu-demo.png"></a>
+                
+              </div>
+            
+
+            <div id="home" class="post">
+              
+                <div style="display: grid; grid-template-columns: 33.33% 33.33% 33.34%; text-align: center;">
+<div class="col">
+<small>
+<p><a href="https://slang.sireum.org">Slang</a>: <a href="https://doc.sireum.org/venues/presentations/slang/isola21/">presentation</a>, <a href="https://link.springer.com/chapter/10.1007%2F978-3-030-89159-6_17">paper</a></p>
+</small>
+</div>
+<div class="col">
+<small>
+<p><a href="https://hamr.sireum.org">HAMR</a>: <a href="https://doc.sireum.org/venues/presentations/hamr/isola21/">presentation</a>, <a href="https://link.springer.com/chapter/10.1007%2F978-3-030-89159-6_18">paper</a></p>
+</small>
+</div>
+<div class="col">
+<small>
+<p><a href="https://logika.sireum.org">Logika</a>: <a href="https://doc.sireum.org/venues/presentations/logika/tccoe22/">presentation</a>, <a href="https://link.springer.com/chapter/10.1007/978-3-031-68150-9_6">paper</a>, <a href="https://textbooks.cs.ksu.edu/cis301/">textbook</a></p>
+</small>
+</div>
+</div>
+<hr>
+<p>Sireum aims to provide basic building blocks, frameworks, and tools to engineer high assurance systems
+by employing various formal method techniques for system validation and verification (V&V) at
+different stages of system development cycle such as architectural designs and system implementations. <a href="/about">Read more &hellip;</a></p>
+<hr>
+<div style="display: grid; grid-template-columns: auto auto auto;">
+  <div class="col" style="text-align: left; margin-top: -2px; border: 1px;">
+    <div style="float: left; margin-top: 2px;">
+    <a href="https://github.com/sireum/kekinian"><i class="fa-brands fa-github-alt" style="font-size: 1.25em;"></i></a>
+    </div>
+    <div style="float: left; margin-left: 8px;">
+    <small><a href="https://github.com/sireum/kekinian/" style="text-decoration: none;" onmouseover="menuUnderline(this, true);" onmouseout="menuUnderline(this, false);">BSD2 License</a></small>
+    </div>
+  </div>
+  <div class="col" style="text-align: center; margin-top: -2px;">
+    <small><a href="https://v.sireum.org">Next-Gen — <b>V</b></a></small>
+  </div>
+  <div class="col" style="text-align: right; margin-top: -2px;">
+    <small><i class="fa-regular fa-copyright"></i> 2017-2026, <a href="https://santoslab.org">SAnToS Lab</a>, <a href="https://ksu.edu">Kansas State University</a>, <a href="mailto:contact@santoslab.org">contact@santoslab.org</a></small>
+  </div>
+</div>
+              
+            </div>
+        </div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/bundle.min.d9847dec188cb3ba71e262769d7f64069d223c3a9713999a5da5f7aca5638686e15a900ac07cc755d19861961f24145ef2d608296933e4150cae87f4911a7dbb.js" integrity="sha512-2YR97BiMs7px4mJ2nX9kBp0iPDqXE5maXaX3rKVjhobhWpAKwHzHVdGYYZYfJBRe8tYIKWkz5BUMrof0kRp9uw=="></script>
+
+
+<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/thecarnie-cycle2/2.1.6c/jquery.cycle2.min.js" integrity="sha512-ydWfQuPu+srw5hhkU8O1XGn3/Kc+GyoDBvYc8E+SyuZKphQP18ZWYKywIFzPWZwQk6dlmTY69aDg/SnFz3qPeQ==" crossorigin="anonymous"></script>
+<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous"></script>
+<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.14/jstree.min.js" integrity="sha512-OQ2by9SrJBwcXaeYmkG2t6FVZiwpyRtFar2VvULjuq5OjVpJLwsUHuNzN9PClqEJAYsWsRPSb4TTfriZzPGiow==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/_pagefind/pagefind-ui.js"></script>
+  <script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', (event) => {
+      new PagefindUI({
+        element: "#search",
+        showEmptyFilters: true,
+        mergeIndex: [
+          
+            { bundlePath: "https:\/\/slang.sireum.org\/_pagefind" },
+          
+            { bundlePath: "https:\/\/logika.sireum.org\/_pagefind" },
+          
+            { bundlePath: "https:\/\/doc.sireum.org\/_pagefind" },
+          
+        ]
+      });
+    });
+  </script>
+  <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js" integrity="sha512-sHSNLECRJSK+BFs7E8DiFc6pf6n90bLI85Emiw1jhreduZhK3VXgq9l4kAt9eTIHYAcuQBKHL01QKs4/3Xgl8g==" crossorigin="anonymous"></script>
+  <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js" integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX+yKMUFHzjaH2+AnM6vp2Xs+gNmaBAVWJjSmuPw76Efg==" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
+        ]
+      });
+    });
+  </script>
+<script style="text/javascript">
+  window.addEventListener('load', function () {
+    $('#page-tree').jstree({
+      "core": {
+        "themes": {
+          "name": document.documentElement.getAttribute("data-theme") == "dark" ? "default-dark" : "default",
+          "dots": true,
+          "icons": false,
+          "variant": "large"
+        }
+      },
+      plugins: [ "ui" ],
+    }).bind("select_node.jstree", function (e, data) {
+      document.location.href = data.node.a_attr.href;
+    }).bind("ready.jstree", function (event, data) {
+      $(this).jstree("open_all");
+    }).bind("open_all.jstree", function (event, data) {
+      level = 0;
+      data.instance.element.find('li').each(function() {
+        if (level > 0 && data.instance.get_path(this).length >= level){
+          data.instance.close_node(this);
+        }
+      });
+      data.instance.element.get()[0].style.display="block";
+    });
+  });
+</script>
+
+
+    </body>
+</html>
